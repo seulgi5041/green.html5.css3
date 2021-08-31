@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>일반구조와 형태구조의 차이</title>
+    <style>
+        /* 틀린 답 */
+        /*  일반구조는 태그의 형태를 따지지 않고 무조건 처음부터 찾는다. 처음에 찾는것이 없으면 바로 출력을 안 해 버림.
+            처음이 h1이기 때문에 출력을 하지 않는 것임. */
+        /* p:first-child { color: red; } */
+
+
+        /* 형태구조는 좀 차분하게 전체 태그에서 자기에게 부여된 태그를 찾아서 출력한다 */
+        p:first-of-type { color: red; } 
+    </style>
+</head>
+<body>
+    <h1>Header1</h1>
+    <p>Header1</p>
+    <h1>Header1</h1>
+    <p>Header1</p>
+    <h1>Header1</h1>
+</body>
+</html>

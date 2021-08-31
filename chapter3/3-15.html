@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>후손선택자</title>
+    <style>
+        
+        /* id속성값으로 header을 가지는 태그의 후손 위치에 있는 h1 태그의 컬러값에 red를 적용한다. 헤더의 후손인 h1 두 개 모두 지정 */
+        /* #header h1 { color: red; } */
+
+        /* id 속성값으로 section을 가지는 태그의 후손 위치에 있는 h1 태그의 컬러값에 orange를 적용 */
+        #section h1 { color: orange; }
+
+        /* 여러개의 후손 선택 태그 선택하고 싶을때 
+            틀린답- #header h1, h2 { color: red; } 로 태그 적용하면 잘못된 결과값이 나오게 된다. */
+        #header h1, header2 { color: red; } 
+
+    </style>
+</head>
+<body>
+    <div id="header">
+        <h1 class="title">Lorem ipsum</h1>
+        <div id="nav">
+            <h1>navigation</h1>
+            <h2>navigation</h2>
+        </div>
+    </div>
+    <div id="section">
+        <h1 class="title">Lorem ipsum2</h1>
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sit dolorum recusandae saepe impedit ex autem sequi tenetur expedita eveniet minima! Animi facere ducimus repudiandae neque facilis nam excepturi, non quaerat.</p>
+    </div>
+</body>
+</html>

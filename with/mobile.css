@@ -1,0 +1,52 @@
+@charset "UTF-8";
+
+/* 초기화 */
+
+* { margin: 0; padding: 0; }
+body { font-family: 'Helvetica', sans-serif; }
+li { list-style: none; }
+a { text-decoration: none; }
+
+/* 헤더 */
+#main_header {
+    height: 45px;
+    background: url('./header_background.png');
+
+    position: relative;
+    text-align: center;
+    line-height: 45px;
+}
+
+#main_header > h1 {
+    color: white;
+}
+
+#main_header > a, #main_header > label {
+    display: block;
+    height: 32px;
+    position: absolute;
+}
+
+#main_header > a.left {
+    width: 62px;
+    left: 5px; top: 7px;
+}
+
+#main_header > label.right {
+    width: 32px;
+    right: 5px; top: 7px;
+}
+
+/* 스프라이트 이미지 */
+
+#main_header > a.left {
+    background: url('sprites.png');
+    background-position: 0px 0px;
+    text-indent: -99999px;
+}
+
+#main_header > label.right {
+    background: url('sprites.png');
+    background-position: -62px 0px;
+    text-indent: -99999px;
+}

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>x테이블태그 자손 선택자주의사항t</title>
+    <style>
+        /* 3-19X 를 요소검사해 보면 저절로 tbody가 만들어진 것을 알 수 있다. tbody를 넣어줘야 반영된다. */
+        table > tbody > tr > th { color: red; }
+    </style>
+</head>
+<body>
+    <table border="1">
+        <tr>
+            <th>이름</th>
+            <th>주소</th>
+        </tr>
+        <tr>
+            <td>윤인성</td>
+            <td>서울 강서구 내발산동</td>
+        </tr>
+    </table>
+</body>
+</html>

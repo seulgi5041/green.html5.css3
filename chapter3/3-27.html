@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>CSS3 Selector Basic Page</title>
+    <style>
+        /* 틀린 답 일단 li를 선택하는 순간 a태그 모두 선택되는거라고 생각하면 됨. */
+        /* li > a:first-child { color: red; } */
+
+        /* 맞는답 */
+        li:first-child > a { color: red; }
+    </style>
+</head>
+<body>
+    <ul>
+        <li><a href="#">Condrasa</a></li>
+        <li><a href="#">Condrasa</a></li>
+        <li><a href="#">Condrasa</a></li>
+        <li><a href="#">Condrasa</a></li>
+        <li><a href="#">Condrasa</a></li>
+    </ul>
+</body>
+</html>

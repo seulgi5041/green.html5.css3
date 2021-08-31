@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS적용 복습</title>
+    <style>
+        #main h1 { color: green; }
+
+        #foot_corp a { text-decoration: none ; color: black ; }
+        #foot_corp .corp > span > a:nth-of-type(1) { color: green; }
+
+    </style>
+</head>
+<body>
+    <form>
+        <header id="main">
+            <h1><b>NAVER</b></h1>
+        </header>
+
+        <div>
+            <label for="id">아이디</label><br />
+            <input type="text"><br /><br />
+        </div>
+        
+        <div>
+            <label for="password">비밀번호</label><br />
+            <input type="password"><br /><br />
+        </div>
+
+        <div>
+            <label for="password">비밀번호 재확인</label><br />
+            <input type="password"><br /><br />
+        </div>
+
+        <div>
+            <label for="name">이름</label><br />
+            <input type="text"><br /><br />
+        </div>
+        
+        <div>
+            <label for="birth">생년월일</label><br />
+            <span><input type="text"  placeholder="년(4자)">
+                    <select id="month">
+                        <option value="m">월</option>
+                        <option value="1">1월</option>
+                        <option value="2">2월</option>
+                        <option value="3">3월</option>
+                        <option value="4">4월</option>
+                        <option value="5">5월</option>
+                        <option value="6">6월</option>
+                        <option value="7">7월</option>
+                        <option value="8">8월</option>
+                        <option value="9">9월</option>
+                        <option value="10">10월</option>
+                        <option value="11">11월</option>
+                        <option value="12">12월</option>                      
+                    </select>
+                <input type="text"  placeholder="일">
+            </span><br /><br />
+        </div>
+
+        <div>
+
+            <label for="sex">성별</label><br />
+            <select id="sex">
+                <option value="sex">성별</option>
+                <option value="m">남성</option>
+                <option value="fm">여성</option>
+                <option value="non">선택안함</option>
+                </select><br /><br /><br />
+        </div>
+
+        <div>
+            <label for="mail">본인 확인 이메일</label><br />
+            <input type="mail" placeholder="선택입력"><br /><br />
+        </div>
+         
+        <div>
+            <label for="tel">휴대전화</label><br />
+            <select id="tel">
+                <option value="+852">홍콩 +852</option>
+                <option value="+82" selected>대한민국 +82</option>
+                <option value="+1">미국/캐나다 +1</option>
+                <option value="+86">중국 +86</option>
+                <option value="+61">호주 +61</option>
+            </select><br />
+        </div>
+          
+        <div>
+            <form method="get">
+                <input type="tel" name="" placeholder="전화번호 입력" >
+                <input type="submit" />
+            </form><br />
+        </div>
+        
+        <div>
+          <input type="text" placeholder="인증번호 입력하세요" disabled><br /><br /><br />
+        </div>
+
+        <div>
+            <form method="post">
+                <input type="submit">
+            </form>
+        </div>
+    </form>
+
+    <footer id="foot_corp">
+        <h5 class="cen">
+            <span><a href="#">이용약관</a></span>
+            <span><a href="#">개인정보처리방침</a></span>
+            <span><a href="#">책임의 한계와 법적고지</a></span>
+            <span><a href="#">회원정보 고객센터</a></span>
+        </h5>
+        <h6 class="corp">
+            <span><a href="#">NAVER</a></span>
+            <span>Copyright</span>
+            <span><a href="#">NAVER Corp.</a></span>
+            <span>All Rights Reserved.</span>
+        </h6>
+    </footer>
+
+</body>
+</html>
