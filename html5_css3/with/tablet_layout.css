@@ -1,0 +1,73 @@
+@charset "UTF-8";
+
+/* 초기화 */
+
+* { margin: 0; padding: 0; }
+body { font-family: 'Helvetica', sans-serif; }
+li { list-style: none; }
+a { text-decoration: none; }
+
+/* 메인헤더 */
+
+#main_header {
+    height: 60px;
+    line-height: 60px;
+    padding-left: 10px;
+    border-bottom: 1px solid black;
+
+    background: #1D4088;
+    color: white;
+}
+
+/* main_header 네비게이션 */
+
+#main_gnb { 
+    overflow: hidden;
+    border-bottom: 1px solid black;
+    background: #32394A; 
+}
+
+#main_gnb >ul.left { 
+    overflow: hidden; 
+    float: left;
+}
+
+#main_gnb >ul.right { 
+    overflow: hidden; 
+    float: right;
+}
+
+#main_gnb >ul.left > li { float: left; }
+#main_gnb >ul.right > li { float: left; }
+
+/* a태그설정 */
+* #main_gnb a { 
+    /* 레이아웃설정 */
+    display: block;
+    padding: 10px 20px;
+
+    /* 색상설정 */
+    border-left: 1px solid #5F6673;
+    border-right: 1px solid #242A37;
+    color: white;
+    font-weight: bold;
+}
+
+/* min-width : 화면 크기와는 상관없이 '최소~부터' 컨텐츠를 줄이지 않겠다.( 컨텐츠는 변화없이 스크롤이 생김.)  */
+body { min-width: 760px; }
+
+
+/* 콘텐츠 */
+#wrap { overflow: hidden; }
+#wrap > #main_lnb {
+    float: left;
+    width: 200px;
+}
+#wrap > #content_wrap {
+    float: left;
+    width: 100%;
+    margin-right: -200px;
+}
+
+#wrap > #content_wrap #content { padding-right: 200px; }
+    
