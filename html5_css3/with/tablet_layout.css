@@ -66,8 +66,41 @@ body { min-width: 760px; }
 #wrap > #content_wrap {
     float: left;
     width: 100%;
+    *width: 99.9%;
+    /* 바로 위 main_lnb에 넓이 200px를 줬기 때문에 -200을 해서 내용을 오른쪽 화면에서부터 200px만큼 밀어준다 */
     margin-right: -200px;
 }
 
+/* 위에 넓이가 100%이기 때문에 200px만큼 글자가 짤려있는 상태이다.(비율이기때문) 그래서 컨텐츠만! 200만큼을 다시 넣어 글자 짤림을 해결해준다. */
 #wrap > #content_wrap #content { padding-right: 200px; }
+
+
+/* 수직목록 */
+#wrap { background: #71B1D1; }
+#main_lnb > ul > li > a {
+    display: block;
+    height: 40px; line-height: 40px;
+    padding-left: 15px;
+
+    border-top: 1px solid #96D6F6;
+    border-bottom: 1px solid #6298B2;
+    color: white;
+    font-weight: bold;
+}
+
+/* 본문 */
+#content {
+    background: white;
+    border-left: 1px solid black;
+}
+article {
+    padding: 10px;
+}
+
+/* 푸터 */
+#main_footer {
+    padding: 10px;
+    border-top: 3px solid black;
+    text-align: center;
+}
     
