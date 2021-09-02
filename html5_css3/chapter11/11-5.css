@@ -1,0 +1,101 @@
+@charset "UTF-8";
+
+/* 초기화 */
+* {
+    margin: 0; padding: 0;
+    font: normal 12px 'Arial'
+}
+a {text-decoration: none !important; }
+img { border: 0; }
+ul { list-style: none; }
+
+/* 메인 */
+
+#container {
+    width: 960px;
+    margin: 0 auto;
+}
+
+header {
+    background: gray;
+}
+
+nav {
+    height: 100px;
+}
+
+section {
+    overflow: hidden;
+}
+
+
+/* ~767까지 */
+@media screen and (max-width: 767px) {
+    section > article {
+        float: none;
+        width: 100%;
+    }
+
+    section > article:nth-child(1) {
+        background: green;
+        height: 500px;
+    }
+
+    section > article:nth-child(2) {
+        background: purple;
+        height: 500px;
+    }
+
+    footer {
+        background: red;
+        height: 100px;
+    }
+}
+
+/* 768px부터 ~ 959px 까지 */
+@media screen and (min-width:768px) and (max-width: 959px) {
+    section > article {
+        float: left;
+    }
+
+    section > article:nth-child(1) {
+        background: green;
+        height: 900px;
+        width: 300px;
+    }
+
+    section > article:nth-child(2) {
+        background: purple;
+        height: 900px;
+        width: 660px;
+    }
+
+    footer {
+        background: red;
+        height: 100px;
+    }
+}
+
+/* 960px ~ 이상 */
+@media screen and (min-width: 960px) {
+    section > article {
+        float: left;
+    }
+
+    section > article:nth-child(1) {
+        background: green;
+        height: 900px;
+        width: 300px;
+    }
+
+    section > article:nth-child(2) {
+        background: purple;
+        height: 900px;
+        width: 660px;
+    }
+
+    footer {
+        background: red;
+        height: 100px;
+    }
+}
