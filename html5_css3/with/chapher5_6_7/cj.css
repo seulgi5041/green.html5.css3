@@ -97,18 +97,22 @@ img { border: 0; }
 
 #content > #section_1{
     overflow: hidden;
+    padding: 30px;
 }
 
 #content > #section_1 > .main_article:nth-of-type(1) {
     text-align: center;
+    padding: 80px;
 }
 
 #content > #section_1 > .main_article img {
     float: left;
-    padding: 20px;
+    margin: 0 auto;
+    padding: 30px;
 }
 
 /* 배너 */
+
 
 
 /* 콘텐츠 2 */
@@ -130,5 +134,9 @@ img { border: 0; }
 
 
 #content_2 > #section_2 > .main_article:nth-of-type(2) > img {
-    text-align: center;
+    display: block;
+    margin: 0 auto;
+    padding-bottom: 30px;
 }
+
+
