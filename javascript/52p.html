@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>논리연산자, 연산자 우선순위</title>
+
+    <script>
+        var a = 10;
+        var b = 20;
+        var m = 30;
+        var n = 40;
+        var result;
+
+
+        //  or 연산자 : || 여러가지 피연산자 중 하나라도 true면 값은 무조건 true
+        result = a > b || b >= m || m > n;
+        document.write(result, "<br>")
+
+        result = a > b || b >= m || m <= n;
+        document.write(result, "<br>")
+
+
+         //  and 연산자 : && 모든 피연산자가 동일 결과값이어야 함. 하나라도 false면 다른 나머지가 전부 ture여도 결과는 false.
+        result = a <= b && b >= m && m <= n;
+        document.write(result, "<br>")
+
+        result = a <= b && b <= m && m <= n;
+        document.write(result, "<br>")
+
+        //  not 연산자 : ! 값을 반대로 출력
+        result = !(a > b);
+        document.write(result, "<br>")
+
+
+    </script>
+</head>
+<body>
+
+    <!-- 연산자 우선순위 (중요) -->
+    
+    <!--
+
+    1. 괄호 ()
+    2. 단항 연산자 ( --, ++, ! )
+    3. 산술 연산자 ( *, /, %, +, - )
+    4. 비교 연산자 ( >, >=, <, <=, ==, ===, !==, != )
+    5. 논리 연산자 ( &&, || )
+    6. 대입-복합-연산자 ( =, +=, -=, *=, /=, %= ) 
+    
+    -->
+    
+</body>
+</html>

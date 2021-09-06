@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>증감연산자</title>
+
+    <script>
+        var num1 = 10;
+        var num2 = 20;
+        var result;
+        
+
+
+
+        num1--;
+        document.write(num1, "<br>");
+
+        num1++;
+        document.write(num1, "<br>");
+
+
+        //    전위연산자. 대입시키고 증가 
+        //    ( 브라우저 상에는 20으로 나오지만 사실상 이미 21로 시스템은 인식한 상태이다. 
+        //     num2를 결과에 먼저 대입시켰기 때문에 브라우저에는 20을 찍고, 그 후에 ++(1만큰 증가)를 대입시켜 시스템상으로는 21을 만들어 놓은 상태) 
+        
+        result = num2++;
+        document.write(result, "<br>");
+
+
+
+        //후위연산자. 증가시키고 대입
+        // 위에 시스템상으로  result의 값이 21이 되어있는 상태이므로 21에서 ++(1만큼증가)대입하면 결과는 22로 나온다.
+        result = ++num2;
+        document.write(result, "<br>");
+
+
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

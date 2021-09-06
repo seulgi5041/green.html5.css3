@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>mission_2</title>
+
+    <script>
+
+        var sale = prompt("4분기 판매량은?", "판매량을 입력하세요.");
+        var sale1 = 1200;
+        var sale2 = 1300;
+        var sale3 = 1000;
+
+        var nomal_s = (sale1 + sale2 + sale3) / 3;
+        var result = sale >= nomal_s;
+        
+        result = result ? "판매량이 평균 이상입니다." : "판매량이 평균 미달입니다.";
+
+        document.write("4분기 " + result);
+
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
