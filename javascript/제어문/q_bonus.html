@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>자판기문제</title>
+</head>
+<body>
+    
+    
+<!--  prompt로 돈과 과자를 입력받은후 내가 입력한 과자이름과 거스름돈을 브라우저에 출력 -->
+<!-- 과자 종류: 허니버터(1300원), 칸쵸(1500원), 프링글스(3000원) -->
+<!-- 아래와 같은 상황일 땐 에러 메세지 출력후 페이지 새로고침(locatoin.reload() 이용) -->
+<!-- 돈을 넣지 않음, 돈이 모자람, 해당과자 존재하지 않음. -->
+
+        
+    <script>
+
+        // 과자종류 선언
+        var product1 = "허니버터"; 
+        var product2 = "칸쵸";
+        var product3 = "프링글스"; 
+
+        var product = product1, product2, product3;
+
+        // // 금액
+        // var price1 = product1 + 1300
+        // var price2 = product2 + 1500
+        // var price3 = product3 + 3000
+
+
+        var userProduct = prompt("구매 품목을 입력하세요.", "");
+
+
+
+            if(userProduct == product) {
+                var userPrice = prompt("금액을 입력하세요.", "");
+                // if(  )
+            } else {
+                alert("해당과자가 없습니다.");
+            }
+
+
+
+    </script>
+            
+</body>
+</html>
