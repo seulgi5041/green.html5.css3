@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .box {
+            width: 100px; height: 100px;
+            background-color: aqua;
+
+            /* 2초동안 서서히 변형됨.(직접해보자.) */
+            -ms-transition-duration: 2s;
+            -moz-transition-duration: 2s;
+            -webkit-transition-duration: 2s;
+            transition-duration: 2s;
+        }
+
+        /* 이벤트가 발생했을 때 사용하고 싶은 변형들이나 애니메이션들은 엘리먼트 속성이 아니라 그 아래 변형속성에 만들어줘야 함. */
+
+        /* 마우스를 올려놓기만 했을 때 */
+        .box:hover {
+            width: 200px;
+            height: 300px;
+            background-color: yellow;
+        }
+
+        /* 박스를 클릭했을 때 */
+        .box:active {
+            background-color: brown;
+        }
+
+    </style>
+</head>
+<body>
+    
+    <div class="box"></div>
+</body>
+</html>
