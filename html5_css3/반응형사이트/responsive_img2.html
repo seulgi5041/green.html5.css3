@@ -8,13 +8,23 @@
 
     <style>
         
+        body {
+            text-align: center;
+        }
+
     </style>
 
 </head>
 <body>
 
+    <!-- html 자체에서 피쳐 태그로 사용 할 수도 있음. -->
     <picture>
-        <source>
+        <source srcset="lime-1000.jpg" media="(min-width:1024px)">
+        <source srcset="lime-740.jpg" media="(min-width:768px)">
+        <source srcset="lime-300.jpg" media="(min-width:320px)">
+        
+        <!-- 가장 기본 사이즈 -->
+        <img src="lime.jpg" alt="lime" style="max-width: 100%;">
     </picture>
 
 </body>
