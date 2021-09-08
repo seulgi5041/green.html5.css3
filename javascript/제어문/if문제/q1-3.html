@@ -17,18 +17,23 @@
         var cl = prompt("학년 입력","예)6학년");
         var score = prompt("점수를 입력하세요","");
 
-        if ( 1 <= score || score >= 100 ) {
-            if ( cl == 4, score >= 60 && cl !=4, score >=70 ) {
-                document.write("합격입니다.")
+        if ( 0 <= score && score >= 100 ) { 
+            if ( cl == 4 score >= 70 && cl !=4, score >=60 ) {
+                document.write("합격입니다.");
             } else {
-                document.write("불합격입니다.")
+                document.write("불합격입니다.");
             } 
         } else {
-            alert ("에러입니다.")
+            alert ("에러입니다.");
         }
 
 
     </script>
+
+<!-- 선생님 답 다른부분. -->
+<!--  // if ( cl == 4 && score >= 70) -->
+
+<!--  //else if((grade < 4 || grade > 4 ) && score >= 60) 4학년 미만, 혹은 4학년 초과이면서 60점 이상일때, -->
 
 
 </body>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>반복문</title>
+</head>
+
+<style>
+.blue {
+    color: blue;
+}
+
+.red {
+    color: red;
+}
+
+</style>
+
+<body>
+    
+
+    <script>
+
+        var i = 20;
+        
+        // i값이 20~10으로 내려가면서 짝수면 파랑색, 홀수면 빨강색.
+        while (i >= 10) {
+            if(i % 2 == 0) {
+                document.write("<p class='blue'>" + i + "</p>");
+            } else{
+                document.write("<p class='red'>" + i + "</p>");
+            }
+            i--;
+        }
+
+    </script>
+</body>
+</html>

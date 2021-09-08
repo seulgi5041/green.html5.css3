@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<style>
+
+    .red {
+        color: red;
+    }
+
+    .green {
+        color: green;
+    }
+
+    .blue {
+        color: blue;
+    }
+
+</style>
+<body>
+    
+    <script>
+
+        // for 안에 선언문작성해서 초기값; 반복 할 조건식; 증감식
+        for( var i = 1; i <= 100; i++ ) {
+            if(i % 5 == 0 && i % 7 != 0) {
+                document.write("<p class='red'>"+ i + "</p>"); //i의 값이 5의 배수
+            } else if (i % 7 == 0 && i % 5 != 0) {
+                document.write("<p class='green'>"+ i + "</p>"); //i의 값이 7의 배수
+            } else if(i % 7 == 0 && i % 5 == 0) {
+                document.write("<p class='blue'>"+ i + "</p>"); //i의 값이 5와 7배수 모두 해당
+            }
+        }
+    </script>
+</body>
+</html>

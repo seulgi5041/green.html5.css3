@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>선택문</title>
+</head>
+<body>
+    
+    <script>
+
+        var site = prompt("네이버, 다음, 네이트, 구글 중 즐겨 사용하는 포털 검색 사이트는?", "");
+        var url;
+
+        switch (site) {
+            case "구글": url="www.google.com";                
+                break;
+            case "다음": url="/www.daum.net"                
+                break;
+            case "네이버": url="www.naver.com"                
+                break;
+            case "네이트": url="www.nate.com"                
+                break;
+        
+            // 만약 아무것도 보기중에 없다면 undefinde 상태가 된다. (정의되지 않은 상태:값 할당X). 무조건 false. if로도 넘어가지 않음.
+            default: alert("보기 중에 없는 사이트입니다"); 
+        }
+
+        if(url) location.href = "http://" + url;
+    </script>
+</body>
+</html>
