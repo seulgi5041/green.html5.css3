@@ -13,11 +13,12 @@
 
     <script>
 
-        var i = 10;
+        var i = 1
 
         //  일단 do 안에 있는 코드를 실행해 버리고, 그 다음에 검사한다.
         do {
-            document.write("hello!!");
+            document.write( i + "hello");
+            i++;
         } while( i < 3 )
         // 검사결과, i는 3보다 작아야 하므로 바로 종료된다.
 
