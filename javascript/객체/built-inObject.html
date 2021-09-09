@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>내장객체 혹은 자바스크립트함수 라고도 함.</title>
+</head>
+<body>
+    
+    <script>
+
+        // 첫번째 객체생성 방법.
+
+        // 변수를 먼저 생성.
+        var tv = new Object(); //객체생성
+        
+        // 객체가 생성된 순간, 메소드(함수)와 속성을 가질 수 있다.
+        tv.color = "white";
+        tv.price = 300000;
+        
+        // 함수는 기능이 들어감.
+        tv.info=function() {
+            document.write("tv 색상: " + this.color, "<br />"); //this. 는 메서드의 객체(여기서는 tv)를 말한다.
+            document.write("tv 가격: " + this.price, "<br />");
+        }
+
+
+        // 두번째 객체생성 방법
+
+        // 한꺼번에 생성할 수도 있음
+        var car = {
+            color: "black",
+            price: 5000000,
+
+            info:function(){
+                document.write("car 색상: " + this.color, "<br />"); 
+                document.write("car 가격: " + this.price, "<br />"); 
+            } //,  >더 쓰고 싶다면 꼭 뒤에 , 붙여야 함.
+            // info:function(){
+            //     document.write("car 색상: " + this.color, "<br />"); 
+            //     document.write("car 가격: " + this.price, "<br />"); 
+            // }  
+
+        };
+
+        document.write("<h1>tv객체 메서드 호출</h1>");
+        tv.info(); //사용하기 위해 함수로 지정한 것을 아래에!!! 쓰고 코드를 써야만 실행이 된다.(위에 썼다고 실행되는 것 아님. 아래에 쓰고 코드를 작성해야만 실행됨.)
+
+        document.write("<h1>car객체 메서드 호출</h1>");
+        car.info();
+
+    </script>
+</body>
+</html>

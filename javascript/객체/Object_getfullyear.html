@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>날짜 관련 메서드(함수)</title>
+</head>
+<body>
+    <h1>오늘부터 올해 연말까지 남은 숫자</h1>
+    <script>
+
+        var today = new Date();
+        var nowYear = today.getFullYear();
+
+        var theDate = new Date(nowYear, 11, 31); // 11월 31일인 이유는 : js에서 제공하는 메서드의 월이 항상 -1로 계산되기 때문.
+        var diffDate = theDate.getTime() - today.getTime(); // 날짜를 바로 빼지 못하므로 일단 밀리초로 계산한다. 연말(내가 정한 특정 날)의 밀리초 - 현재의 밀리초
+
+        var result = Math.ceil( diffDate / (60 * 1000 * 60 * 24)); // 일자로 바꿔주기 위한 식임. 1초=1000msc, 1분(60초)=1000*60, 1시간(60분)=1000*60*60, 1일(60분*24)=1000*60*60*24
+        document.write("연말 D-Day: " + result + "일 남았습니다.");
+
+    </script>
+</body>
+</html>
