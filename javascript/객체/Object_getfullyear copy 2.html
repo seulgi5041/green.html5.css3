@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3일 뒤 날짜</title>
+</head>
+<body>
+    <h1>오늘부터 3일뒤 날짜를 구하시오</h1>
+
+    <script>
+        
+
+        // get과 set의 차이를 알아두자. 
+        // gettime : 정보를 얻어서 주는 것 
+        // settime : 설정해준다.
+
+
+        var addDay = 3;
+        var nowDate = new Date();
+
+        // 3일후의 날짜를 밀리초단위로 계산해주고있는 식
+        var addDate = nowDate.getTime() + (addDay * 1000* 60 * 60 * 24);
+        
+
+        // 컴퓨터는 nowDate가 날짜인지 모름. addDate의 값을 받으라고 셋팅해주며 밀리초로써 날짜임을 알게 해준다.
+        nowDate.setTime(addDate);
+
+
+        var year = nowDate.getFullYear();
+        // get year: 그냥 년도만 나옴. 해당 년도에서 1900을 빼주기 때문에 20201년 기준 121 이 출력될 것.
+        var month = nowDate.getMonth() + 1;
+        var date = nowDate.getDate();
+
+        document.write(year + "/" + month + "/" + date);
+        
+
+    </script>
+</body>
+</html>
