@@ -12,10 +12,16 @@
     <script>
 
 
+        var num = 0; //중요: 초기값을 반드시 줘야 한다. 안주면 undefined된 상태라 에러남.
+                     //계산을 해줘야 할 때 반드시 초기값을 줘야 한다.
+
+
         // for문. 0~10미만의 정수의 합. (결과 45)
-        for(var i = 1; i >= 0 && i < 10; i++){
-            
+        for(var i = 0; i < 10; i++){
+            num +=i;
         }
+
+        document.write(num);
 
     </script>
 </body>

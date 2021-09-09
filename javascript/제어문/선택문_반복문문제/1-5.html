@@ -12,10 +12,10 @@
     <script>
 
 
-        // switch문 과목입력 후 과목코드 출력
+        // switch문 과목입력 후 과목코드 출력. 그 외엔 00 으로 나오게끔.
 
 
-        var sub = prompt("과목을 입력하세요.- 수학,영어,국어,국사,기타")
+        var sub = prompt("과목을 입력하세요.", "");
         var code;
 
         switch (sub) {
@@ -27,11 +27,10 @@
                 break;
             case "국사": code = "04"
                 break;
-
-            default: code = "00"
+            default: code = "00" //없어도 실행은 됨.
         }
 
-        document.write(sub + " 과목코드 : " + code)
+        document.write(" 과목코드 : " + code)
 
         
 

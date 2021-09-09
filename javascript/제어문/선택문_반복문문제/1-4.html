@@ -11,13 +11,18 @@
 
     <script>
 
-        // for문. 0~10까지 짝수만 오름차순으로 출력.
 
-        for(var i = 1; i <= 10; i++){
-            if(i % 2 == 0) {
-                document.write("짝수" + i + "<br />");
+        var num = 0;  //초기값을 먼저 선언. 1-3과 같은 이유!!!
+
+        // 1~20 중 2와 3의 배수의 합.
+        
+        for(var i = 0; i < 20; i++) {
+            if( (i % 2 == 0) || (i % 3 == 0) ){
+               num += i;
             }
         }
+
+        document.write(num);
 
     </script>
 </body>
