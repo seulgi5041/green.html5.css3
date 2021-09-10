@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>배열 객체의 메서드 및 속성</title>
+</head>
+<body>
+    
+    <script>
+
+        var greenArr = [ "교대", "방배", "강남", "을지로" ];
+        var yelloArr = [ "미금", "정자", "수서" ];
+
+        greenArr.splice(2, 1, "서초" , "역삼"); //2번 데이터 자리를 1개 삭제하고, 서초,역삼을 넣겠다. (교대, 방배, 서초, 역삼, 을지로가 출력됨)
+        console.log(greenArr);
+        
+        var data1 = yelloArr.pop(); // 가장 마지막 인덱스를 data1에 저장(즉, 수서가 저장됨)
+        var data2 = yelloArr.shift(); //가장 앞 쪽 인덱스를 data2에 저장(즉, 미금이 저장됨)
+        console.log(yelloArr); // yelloArr에서 pop,shift로 데이터 두 개를 빼갔으므로, 출력해보면 정자만 하나 남아있음.
+
+        yelloArr.push(data2); // yelloArr 마지막 인덱스에 밀어넣는다.(정자 뒤로 미금이 들어간다.)
+        console.log(yelloArr);
+
+        yelloArr.unshift(data1); //yelloArr 가장 앞 쪽 인덱스에 밀어넣는다(수서가 가장 앞으로 들어감.)
+        console.log(yelloArr);  // 최종적으로 수서, 정자, 미금이 출력된다.
+
+    </script>
+</body>
+</html>
