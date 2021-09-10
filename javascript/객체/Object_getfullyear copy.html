@@ -14,6 +14,7 @@
         var nowYear = today.getFullYear();
 
         var birth = new Date(1989,3,25);
+        // 위에서 특정 날짜만 써주면 컴퓨터는 문자로만 인식하므로 밑에 컴퓨터가 알아 볼 수 있게 가져와준다.
         var theMonth = birth.getMonth(),
             theDate = birth.getDate(),
             theDay = birth.getDay();
@@ -22,8 +23,6 @@
 
         var result = Math.ceil( diffDate / (1000* 60 * 60 * 24));
         document.write(result);
-
-        
 
     </script>
 </body>
