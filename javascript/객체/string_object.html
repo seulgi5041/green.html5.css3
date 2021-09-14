@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>문자열객체</title>
+</head>
+<body>
+    <script>
+        var t="Hello Thank you good luck to you";
+        document.write(t);
+
+
+        document.write(t.charAt(16), "<br />"); // index 16번에 저장된 문자를 불러온다 (g)
+        document.write(t.indexOf("you"), "<br />"); //앞에서부터 제일먼저! 발견된 you의 인덱스 값을 반환한다-공백포함-(12)
+        document.write(t.indexOf("you", 16), "<br />"); //문자열 인덱스16위치에서부터(즉 /good~) 먼저 발견된 you의 인덱스 값을 반환한다.(29)
+        document.write(t.lastIndexOf("you"), "<br />"); //index맨 뒤에서부터 제일먼저 발견된 you의 인덱스 값을 반환.(29)
+        document.write(t.lastIndexOf("you", 25), "<br />"); //문자열 인덱스25위치에서부터(즉 ~/to)앞쪽으로 찾아서 먼저 발견된 you의 인덱스 값 반환(12)
+        document.write(t.match("luck"), "<br />"); //먼저 발견된luck와 일치하는 문자 반환
+        document.write(t.search("you"), "<br />"); //먼저 발견된 you의 인덱스 값 반환
+        
+        // 문자열 인덱스 21번째부터(21번째포함) 총 네글자를 가져옴 (luck)
+        document.write(t.substr(21, 4), "<br />");
+
+        // 문자열 인덱스 6번째부터 인덱스 12번째 이전까지 (즉 인덱스 6~ 인덱스 11까지)의 문자를 가져옴 (Thank)
+        document.write(t.substring(6, 12), "<br />");
+        // 음수 사용시 주의!!
+        // 음수를 대입하면 해당 값은 무조건 0으로 치환(0부터 12인덱스, 즉 0부터 11인덱스까지 출력하겠다는 뜻이 된다.)
+        document.write(t.substring(-6, 12),"<br />");
+        // 끝자리에 음수를 쓰면 뒷자리의 0이 앞자리와 바뀐다. (즉 아래는 (0부터 12인덱스, 즉 0부터 11인덱스까지 출력하겠다는 뜻이 된다.))
+        document.write(t.substring(12, -6),"<br />"); 
+
+        //세번째인덱스(즉 두번째 인덱스자리)와 뒤에서 세번째인덱스(즉 뒤에서 두번째인덱스)를 잘라낸다. ->결과값:lo javascr
+        var sl ="hello javascript"
+        document.write(sl.slice(3, -3), "<br />");
+        
+
+        document.write(t.replace("you", "me"), "<br />"); //가장 먼저 발견된 you를 me로 바꿈.
+        document.write(t.toLowerCase(), "<br />"); //영어를 모두 소문자로 반환
+        document.write(t.toUpperCase(), "<br />"); //영어를 모두 대문자로 반환
+        document.write(t.length, "<br />"); //문자의 총 개수 반환. 공백도 문자로 취급한다. (32)
+        
+
+        //공백 문자를 기준으로 문자 분리. 쌍따옴표 안에는 공백, 문자열 - 등등 문자를 분리 할 수 있는 모든 것을 다 넣을 수 있음. 
+        // 분리된 문자열은 새로운 변수에 할당할 수 있으며 배열이 된다.
+
+        var arr = t.split(" "); 
+        document.write(arr[0], "<br />"); //arr인덱스의 0번째 배열에 저장된 문자열 출력. (Hello)
+        document.write(arr[4], "<br />"); //arr인덱스의 4번째 배열에 저장된 문자열 출력. (luck)
+
+
+        var str = "A";
+        var t=str.charCodeAt(0); //변수에 저장된 문자열 중 0번 인덱스의 문자 "A"의 아스키 코드값을 반환
+
+        document.write(t, "<br />"); //"A"의 아스키 코드값 출력 (65)
+        document.write(String.fromCharCode(65), "<br />"); //코드값 65에 해당하는 문자 반환 (A)
+    </script>
+</body>
+</html>

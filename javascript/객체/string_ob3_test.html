@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>문자열객체로 메일받기</title>
+</head>
+<body>
+    <script>
+        var userEmail = prompt("당신의 이메일은?", "");
+        var arrUrl = [ ".co.kr", ".com", ".net", ".or.kr", ".go.kr" ];
+
+        var check1 = false;
+        var check2 = false;
+
+        // indexOF는 무조건 0부터 시작해서 False면 -1을 반환한다. 참이면 indexOF("조건") > 0  굉장히 많이 쓰니 꼭 기억해 둘 것!!! 
+        if(userEmail.indexOf("@") > 0){check1 = true;}
+
+        // arrUrl의 데이터개수(5개를 반환)
+        for(var i = 0; i < arrUrl.length; i++){
+            // 입력한 메일과 arrUrl단어를 하나씩! 비교하여 하나라도 일치하면 check2에 true를 찍음
+            if(userEmail.indexOf(arrUrl[i]) > 0){
+                check2 = true;
+            }
+        }
+
+        // && 이므로 둘 다 true가 나와야만 이메일이 찍힘. 둘 중 하나라도 False거나 둘 다 False면 바로 알람창이 뜬다.
+        if(check1 && check2){
+            document.write(userEmail);
+        } else {
+            alert("이메일 형식이 잘못되었습니다.");
+        }
+        
+    </script>
+</body>
+</html>

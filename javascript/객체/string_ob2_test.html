@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>문자열객체로 이름,연락처받기</title>
+</head>
+<body>
+    <script>
+        var useName = prompt("당신의 영문 이름은?", "");
+
+        var upperName = useName.toUpperCase();
+        document.write(upperName, "<br />");
+
+        var userNum = prompt("당신의 연락처는?", "");
+        // 0부터 7이전 인덱스(즉 0~6인덱스)까지 자르고 그 네자리는 별표 표시하겠다.
+        var result = userNum.substring(0, userNum.length - 4) + "****";
+        document.write(result, "<br />")
+        
+    </script>
+</body>
+</html>

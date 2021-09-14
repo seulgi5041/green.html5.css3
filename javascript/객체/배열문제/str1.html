@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>문자열 객체 메서드 이용</title>
+</head>
+<body>
+    
+
+    <script>
+        
+        
+        var str = "url.html?name=javascript&no=123&porp=test&data=20211211";
+
+        document.write(str.length, "<br />");
+
+        // 1.해당 주소에서 쿼리스트링만 분리하시오.
+        var arr = str.split("?");
+        document.write("1번 문제: " + arr[1], "<br />"+"<br />");
+
+        // 인덱스오프로 ?전까지 찾고 ?도 필요없으니 +1해서 ?까지 포함. url의 길이 끝까지를 포함해서 뽑는다. <<이렇게 가변성을 주어야 나중에 일 할 때 편함.
+        // var arr = url.substring(url.indexOF("?")+1, url.length);
+
+
+        // 2. 각각의 쿼리스트링의 변수와 값을 콘솔에 출력하시오.(굳이 분리하지 않아도 됨.)
+        var data1 = arr[0];
+        var data2 = arr[1];
+
+        var q = data2.split("&");
+        document.write("2번문제" + "<br />");
+        document.write(q[0], "<br />");
+        document.write(q[1], "<br />");
+        document.write(q[2], "<br />");
+        document.write(q[3], "<br />");
+
+        var a = q[0];
+        var Da3 = a.split("=");
+        document.write(Da3[0], "<br />");
+        document.write(Da3[1]);
+
+
+
+
+    </script>
+</body>
+</html>
