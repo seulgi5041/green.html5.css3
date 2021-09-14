@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>브라우저 객체 모델</title>
+</head>
+<body>
+    <h1>일정 시간 간격으로 딱 한 번 값 증가시키기</h1>
+    <p>콘솔 패널을 열어 확인하세요.</p>
+    <script>
+
+        var addNum = 0;
+        
+
+        // 5초(5000ms)간격으로 addNum 한번만 실행되고 종료
+        var auto = setTimeout(function() {
+            addNum++;
+            console.log(addNum);
+        }, 5000);
+    </script>
+
+</body>
+</html>

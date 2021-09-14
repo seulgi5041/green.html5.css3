@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+
+    //점심시간에 짜장면, 돈가스, 된장국, 김치찌개, 회덮밥 중 어떤 메뉴로 선택할지 랜덤으로 선택되도록 만드시오.
+    // 배열 객체를 이용, 메뉴의 5개 데이터를 변수 menu에 참조시키세요.
+    // Math.random()과 배열 데이터개수(length)를 이용하여 배열 인덱스값이 랜덤으로 나오도록 하세요.
+
+    var menu = ["짜장면", "돈가스", "된장국", "김치찌개", "회덮밥"];
+    var menuNum = Math.floor(Math.random()*menu.length);
+    var result = menu[menuNum];
+    document.write(result);
+    </script>
+</body>
+</html>

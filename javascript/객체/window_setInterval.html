@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>브라우저 객체 모델</title>
+</head>
+<body>
+    <h1>일정 시간 간격으로 값 증가, 감소 시키기</h1>
+    <p>콘솔 패널을 열어 확인하세요.</p>
+    <script>
+
+        var addNum = 0;
+        var subNum = 1000;
+
+        // 3초(3000ms)간격으로 반복시행. addNum이 1씩 증가
+        var auto_1 = setInterval(function(){
+            addNum++;
+            console.log("addNum: " + addNum);
+        }, 3000);
+
+        var auto_2 = setInterval(function(){
+            subNum--;
+            console.log("subNum: " + subNum);
+        }, 3000);
+    </script>
+    
+    <button onclick="clearInterval(auto_1)">증가 정지</button>
+    <button onclick="clearInterval(auto_2)">감소 정지</button>
+</body>
+</html>
