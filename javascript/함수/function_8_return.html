@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>함수에서 return문의 역할</title>
+</head>
+<body>
+    
+    <h1>데이터를 반환하고 강제 종료하는 retrun문</h1>
+    
+    <script>
+
+        function testAvg(arrData) {
+            var sum = 0;
+            for (var i = 0; i < arrData.length; i++) { //i가 배열의길이 보다 작으면 하나씩 증가한다.(참인만큼 증가)
+                sum += Number(prompt(arrData[i] + "점수는?", "0")); //배열에 저장된 데이터길이(배열길이)만큼 반복문 실행
+            }
+
+
+            var avg = sum / arrData.length; // 평균점수 구하기.
+            return avg;
+        }
+
+        var arrSubject = ["국어", "수학"];
+        var result = testAvg(arrSubject);
+
+        document.write("평균 점수는 " + result + "점입니다.");
+
+    </script>
+</body>
+</html>

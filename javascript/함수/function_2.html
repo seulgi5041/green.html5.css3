@@ -6,22 +6,29 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
-<body>
+
+<body id="theBody">
     <h1>함수정의문</h1>
 
+
+    
     <script>
 
-        var color = ["white", "yellow", "aqua", "purple"];
+        var color = ["white", "yellow", "aqua", "purple"]; //각 [0, 1, 2, 3] 배열(length: 4)
 
         var i = 0;
         function changeColor() {
             i++;
-            if(i >= color.length) {
-                i = 0;
+            //i가 color의 배열길이(4개)보다 작거나 같으면, document.getElementById("theBody"); 이 부분으로 가서 color[i]; 실행
+            if(i >= color.length) { 
+                i = 0; //color 배열길이가 4보다 커지는 순간 초기화가 되어 다시 white로 돌아감.
             }
 
             var bodyTag = document.getElementById("theBody");
+            bodyTag.style.backgroundColor = color[i];
         }
     </script>
+    
+    <button onclick="changeColor();">배경색 바꾸기</button> 
 </body>
 </html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>매개변수가 있는 함수 정의문</title>
+</head>
+<body>
+
+    <script>
+
+
+        function myFnc(name, area) { //매개변수1: name / 매개변수2: arer
+            document.write("안녕하세요. " + name + "입니다.", "<br />");
+            document.write("사는 곳은 " + area + "입니다.", "<br /><br />");
+        }
+
+        myFnc("홍당무", "서울"); //데이터1: 홍당무 - 매개변수1와 연결 , 데이터2: 서울 - 매개변수2와 연결
+
+        myFnc("깍두기", "부산"); //데이터1: 깍두기 - 매개변수1와 연결 , 데이터2: 부산 - 매개변수2와 연결
+
+        // 함수는 선언해주는 수대로 실행되기 때문에 위에처럼 두 개를 선언하면 두 번 실행, 또 다르게 선언하면 그 수대로 실행된다.
+    </script>
+</body>
+</html>
