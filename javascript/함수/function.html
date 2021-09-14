@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>함수:코드자체를 저장한다. 코드는 주로 기능별로 나눈다.</h1>
+
+    <script>
+
+        // 변수 선언. 아래와 같은 변수를 전연변수라고 한다(오만군데에서 다 불러다가 쓸 수 있는 변수.-단점이 있으므로 매개변수로 쓰이게 된다.-)
+        var count = 0;
+
+
+        // 함수를 쓰는 첫번째 방법.
+
+        // 호이스팅: 일반 함수는 호이스팅을 지원한다.
+        // 아래처럼 함수 호출문이 먼저 나와도 호이스팅 방식이 적용되어 정상적으로 함수를 호출한다.
+        myFnc(); // 호출문.
+
+        // 호이스팅에 의해 함수정의문이 끌어올려져 함수를 호출하여 위에 있는 호출문이 실행된다.
+        function myFnc() {
+            count++;
+            document.write("hello" + count, "<br />");
+        }
+
+        myFnc(); // 함수는 꼭 호출문을 써줘야 정상 실행된다. 호출문을 써주지 않으면 선언만 한 상태로 실행은 되지 않는다.
+
+
+        // 함수를 쓰는 두번째 방법. 주로 두번째 방법을 가장 많이 쓴다.
+        var theFnc = function() {
+            count++;
+            document.write("bye" + count, "<br />");
+        }
+
+        theFnc(); //호출문
+        // 함수는 호출문을 쓸 때마다 실행된다. (두번 쓰면 두 번 실행. 세 번 쓰면 세 번 실행.)
+    </script>
+</body>
+</html>
