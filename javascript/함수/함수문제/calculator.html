@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>계산기만들기</title>
+
+    <style>
+        
+        /* 화면 출력 부분 */
+        table { border-collapse: collapse; 
+        }
+
+        .display input {
+            border-style: none;
+            text-align: right;
+            height: 40px;
+            width: 100%;
+            font-size: 3rem;
+        }
+
+    
+
+        .display > td {
+            width:280px;
+            padding: 20px 10px;
+        }
+
+
+        /* 키패드 크기 부분 */
+
+        td{
+            text-align: center;
+            padding: 20px 30px;
+            font-size: 2rem;
+        }
+
+
+
+        
+
+
+    </style>
+</head>
+
+<body>
+    
+    <table border="1">
+        <tr class="display">
+            <td colspan="4">
+                <input type="text" id="display" value="0" disabled>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="3" >AC</td>
+            <td onclick="add('/')">/</td>
+        </tr>
+        <tr>
+            <td onclick="add(7)">7</td>
+            <td onclick="add(8)">8</td>
+            <td onclick="add(9)">9</td>
+            <td onclick="add('*')">*</td>
+        </tr>
+        <tr>
+            <td onclick="add(4)">4</td>
+            <td onclick="add(5)">5</td>
+            <td onclick="add(6)">6</td>
+            <td onclick="add('-')">-</td>
+        </tr>
+        <tr>
+            <td onclick="add(1)">1</td>
+            <td onclick="add(2)">2</td>
+            <td onclick="add(3)">3</td>
+            <td onclick="add('+')">+</td>
+        </tr>
+        <tr>
+            <td colspan="2" onclick="add(0)">0</td>
+            <td onclick="add('.')">.</td>
+            <td>=</td>
+        </tr>
+    </table>
+        
+        
+    
+
+
+    <script>
+
+        function add(calcu) {
+            var display = document.getElementById("display");
+
+            // <input> 태그는 value라는 속성을 가짐. <input> 태그가 가진 값은 value라는 속성에 저장
+            display.value += calcu;
+        }
+
+        
+
+
+
+    </script>
+
+</body>
+</html>
