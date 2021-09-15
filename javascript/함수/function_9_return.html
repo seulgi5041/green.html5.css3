@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>함수에서 return문의 역할</title>
+</head>
+<body>
+    
+    <h1>데이터를 반환하고 강제 종료하는 retrun문</h1>
+
+    <div id="galleryZone">
+        <p><img src="images/pic_1.png" id="photo" alt=""></p>
+        <p>
+            <button onclick="gallery(0)">이전</button>
+            <button onclick="gallery(1)">다음</button>
+        </p>
+    </div>
+    
+
+    <script>
+
+        // true:1 , False:0 기억해두자.
+        var num = 1;
+        function gallery(direct) { //direct: 0
+            if(direct) { //true일 때 실행되는 조건
+                if (num === 4) return; //return은 값 없이 단독으로도 쓸 수 있다. (*return을 만나면 함수는 무조건 끝나버림. 밑에 식은 다 무시해버리고 바로 종료된다.)
+                num++;
+            } else { //false일 때 실행되는 조건
+                if (num === 1) return;
+                num--;
+            }
+
+
+            var imgTag = document.getElementById("photo");
+            imgTag.setAttribute("src", "images/pic_" + num + ".png");
+            //setAttribute: javascript에서 제공하는 코드임.
+        }
+    </script>
+</body>
+</html>

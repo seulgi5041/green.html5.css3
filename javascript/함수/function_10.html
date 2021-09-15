@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>재귀함수</title>
+</head>
+<body>
+    
+    <h1>재귀함수 : 자기 자신을 호출한다.(반복문과 비슷)</h1>
+    <p>재귀함수는 반드시 return문이 있어야 한다.</p>
+
+    <script>
+
+        var num = 0;
+        function testFnc() {
+            num++;
+            document.write(num, "<br>");
+            if (num === 10) return;
+
+            testFnc(); //실행되어 내려오다가 여기에서 다시 올라가서 10이 될 때까지 실행한다. 10이 되는 순간 return이 되어 빠져나온다.
+
+        }
+
+
+        testFnc(); //맨 처음 실행되는 호출문
+
+    </script>
+</body>
+</html>
