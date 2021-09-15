@@ -11,17 +11,26 @@
     <script>
         var arr = [2, 5, 9, 6];
 
-        var data1 = arr.shift();
+        // var data1 = arr.shift();
 
-        arr.push(data1);
+        // arr.push(data1);
+        // console.log(arr);
+
+        // arr.splice(0, 1);
+        // console.log(arr);
+
+        // var data2 = arr.pop();
+        // arr.unshift(data2);
+        // console.log(arr);
+
+        for (var i = 0; i < arr.length; i++) {
+            if (arr[1] === 5) { //i에 배열[1]에 5 데이터가 들어왔을 때
+                arr.splice(i,1); //i인덱스부터 1개 데이터를 삭제.(즉 i에 '5'가 들어있는 [1] 인덱스가 들어왔을때 한 개를 삭제.)
+            }
+        }
+
         console.log(arr);
 
-        arr.splice(0, 1);
-        console.log(arr);
-
-        var data2 = arr.pop();
-        arr.unshift(data2);
-        console.log(arr);
         
     </script>
 </body>

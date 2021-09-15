@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -12,15 +12,23 @@
     예를 들어 225468을 수락하면 출력은 -2-254-6-8이어야 합니다.
     -->
     <script>
-        const num = window.prompt("숫자를 입력하세요.",""); //윈도우 안 붙여도 됨.
-        const str = num.toString("prompt"); // 문자열은 배열화가 된다고 생각해야됨
-        
-        console.log(prompt+[0]);
-        
 
-        const result = [];
+        // const : 절대 변하지 않는 수 선언 할 때(상수)  const는 상수지만 배열에서 push는 가능하다. 
+        const str = window.prompt("숫자를 입력하세요.",""); //윈도우 안 붙여도 됨.
+        //const str = num.toString(); // 문자열은 배열화가 된다고 생각해야됨
+        const result = []; //빈배열
 
+        // let: 같은 이름의 변수를 선언 할 수 없음. (반면, var은 같은 이름의 변수를 선언해도 됨.)
+        for(let x = 0; x < str.length; x++) { //먼저 입력받은 str를 한 번 훑어준다.
+            if(str[x] % 2 === 0){
+                result.push('-', str[x]); //push: 배열의 맨 끝에 값을 넣어주는 아이
+            }
+            else{
+                result.push(str[x]);
+            }
+        }
         
+        console.log(result);
         
 
 

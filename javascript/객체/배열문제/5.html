@@ -7,18 +7,56 @@
     <title>Document</title>
 </head>
 <body>
+    
+
     <!-- 
     5. 배열에서 중복 항목을 제거하는 코드를 작성하십시오
     -->
     <script>
         var num = [1, 2, 2, 4, 5, 4, 7, 8, 7, 3, 6];
 
-        num.splice(2, 10, 4, 5, 7, 8, 3, 6);
-        console.log(num);
+        // num.splice(2, 10, 4, 5, 7, 8, 3, 6);
+        // console.log(num);
 
-        num.sort();
-        console.log(num);
+        // num.sort();
+        // console.log(num);
     
+
+        var x,
+            out=[],
+            obj=[];
+
+        for (x = 0; x < num.length; x++){ //일단 num을 쫙 훑는다.
+            obj[num[x]]=0; //obj라는 배열에 num배열을 또 인덱스화 시킴.(즉, num배열이 obj배열의 인덱스가 된 것.) 각 인덱스의 값을 0으로 준다.
+        }
+        for (x in obj) { //obj에 있는 인덱스를 가져와서 아웃이라는 배열에 내보내준다.(즉, 중복이 제거됐던 아이들)
+            out.push(x);
+        }
+
+        console.log(num);
+        console.log(out);
+
+
+        //var num = [1, 2, 2, 4, 5, 4, 7, 8, 7, 3, 6];
+        //num인덱스의 길이를 x라고 할 때, x는 하나씩 증가한다.
+        //obj[num[x]]=0;
+
+        //obj[] : 0인덱스는 비어있음.
+        //obj[num[0] = 1] = 0
+        //obj[num[1] = 2] = 0
+        //obj[num[2] = 2] = 0(값이 중복. 우리 눈에는 안 보이지만 컴퓨터는 값을 덮어 씌우며 그 자리를 비워둔다.)
+        //obj[num[3] = 4] = 0
+        //obj[num[4] = 5] = 0
+        //obj[num[5] = 4] = 0(값이 중복. 우리 눈에는 안 보이지만 컴퓨터는 값을 덮어 씌우며 그 자리를 비워둔다.)
+        //obj[num[6] = 7] = 0
+        //obj = [empty, 0 , 0, empty(2가 중복되어 3이 없기 때문), 0, 0, empty, 0, ] 
+        // 이런식으로 쭉쭉 배열되다가 나중에 num배열에 있는 3, 6 등을 만나며 empty자리가 0으로 채워지면, 아래와 같은 배열이 완성된다.
+
+        // obj = (empty,) [0, 0, 0, 0, 0, 0, 0, 0] 길이는 8개
+        // empth는 아예 취급을 안 하므로 총 길이는 8개. (중복된 숫자는 컴퓨터가 값을 덮어 씌웠기 때문에 우리눈에는 마치 삭제된 것처럼 보인다.)
+
+
+
     </script>
 </body>
 </html>
