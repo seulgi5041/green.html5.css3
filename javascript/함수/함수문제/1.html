@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>계산기만들기</title>
+</head>
+<body>
+    <h1>함수 이용한 계산기 만들기(매개변수, 리턴이용)</h1>
+    <p>덧셈,뺄셈,나눗셈,곱셈 + 매개변수2개 + 결과값은 리턴.</p>
+
+    <script>
+
+        var num1 = Number(prompt("숫자를 입력하세요", 0));
+        var num2 = Number(prompt("숫자를 입력하세요", 0));
+
+        function add(a, b) {
+            var result = a + b;
+            return result;
+        }
+        function sub(a, b) {
+            var result = a - b;
+            return result;
+        }
+        function division(a, b) {
+            var result = a / b;
+            return result;
+        }
+        function multiple(a, b) {
+            var result = a * b;
+            return result;
+        }
+
+
+        document.write(add(num1, num2) + "<br />");
+        document.write(sub(num1, num2) + "<br />");
+        document.write(division(num1, num2) + "<br />");
+        document.write(multiple(num1, num2) + "<br />");
+        
+        
+    </script>
+</body>
+</html>
