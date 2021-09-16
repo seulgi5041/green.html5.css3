@@ -7,118 +7,83 @@
     <title>계산기만들기</title>
 
     <style>
-
-
-        table { border-collapse: collapse; 
+        *{
+            margin: 0; padding: 0; 
         }
+
+        table {
+            border-collapse: collapse;
+            width: 300px; 
+        }
+
+        td {
+            padding: 20px 0px;
+            text-align: center;
+        }
+
+        .input td {
+            padding: 5px 5px;
+        }
+
+        .input_1 td {
+            padding: 5px 5px;
+        }
+
+
+        input {
+            width: 100%;
+            border: none;
+            font-size: 2rem;
+            text-align: right;
+            background-color: gray;
+        }
+
 
         /* 화면 출력 부분 */
-        
-        .display input {
-            border-style: none;
-            text-align: right;
-            height: 100%;
-            width: 100%;
-            font-size: 2rem;
-        }
-
-        .display > td {
-            width:280px;
-            padding: 0%;
-            background-color: rgb(231, 231, 231);
-        }
-
-        tr:nth-of-type(2) > td {
-            padding: 0%;
-        }
-
-        tr:nth-of-type(2) > td input {
-            font-size: 3rem;
-            text-align: right;
-        }
-
-
-        /* 키패드 부분 */
-
-        tr td{
-            text-align: center;
-            padding: 20px 30px;
-            background-color: rgb(114, 113, 113);
-            border
-        }
-
-        tr td:nth-last-of-type(4n+1) {
-            background-color: orange;
-        }
-
-
 
         
 
-
+        
     </style>
-</head>
-
+    
 <body>
-    
-    <table border="1">
-        <tr class="display">
-            <td colspan="4">
-                <input type="text" id="display" value="" disabled>
-            </td>
+
+    <table border="1";>
+        <tr class="input">
+            <td colspan="4"><input type="text" disabled></td>           
         </tr>
-        <tr class="display">
-            <td colspan="4">
-                <input type="text" id="display" value="" disabled>
-            </td>
+        <tr class="input_1">
+            <td colspan="4"><input type="text" disabled></td>
         </tr>
         <tr>
-            <td colspan="3" >AC</td>
-            <td onclick="add('/')">/</td>
+            <td colspan="3">AC</td>
+            <td>/</td>
         </tr>
         <tr>
-            <td onclick="add(7)">7</td>
-            <td onclick="add(8)">8</td>
-            <td onclick="add(9)">9</td>
-            <td onclick="add('*')">*</td>
+            <td>7</td>
+            <td>8</td>
+            <td>9</td>
+            <td class="col">X</td>
         </tr>
         <tr>
-            <td onclick="add(4)">4</td>
-            <td onclick="add(5)">5</td>
-            <td onclick="add(6)">6</td>
-            <td onclick="add('-')">-</td>
+            <td>4</td>
+            <td>5</td>
+            <td>6</td>
+            <td class="col">-</td>
         </tr>
         <tr>
-            <td onclick="add(1)">1</td>
-            <td onclick="add(2)">2</td>
-            <td onclick="add(3)">3</td>
-            <td onclick="add('+')">+</td>
-        </tr>
+            <td>3</td>
+            <td>2</td>
+            <td>1</td>
+            <td class="col">+</td>
+        </tr>      
         <tr>
-            <td colspan="2" onclick="add(0)">0</td>
-            <td onclick="add('.')">.</td>
-            <td>=</td>
+            <td colspan="2">0</td>
+            <td>.</td>
+            <td class="col">=</td>
         </tr>
+
     </table>
-        
-        
-    
-
-
-    <script>
-
-        function add(calcu) {
-            var display = document.getElementById("display");
-
-            // <input> 태그는 value라는 속성을 가짐. <input> 태그가 가진 값은 value라는 속성에 저장
-            display.value += calcu;
-        }
-
-        
-
-
-
-    </script>
 
 </body>
 </html>
