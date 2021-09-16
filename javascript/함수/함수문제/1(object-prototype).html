@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>계산기만들기-객체:프로토타입</title>
+</head>
+<body>
+    <h1>함수 이용한 계산기 만들기(매개변수, 리턴이용)</h1>
+    <p>덧셈,뺄셈,나눗셈,곱셈 + 매개변수2개 + 결과값은 리턴.</p>
+    <p>객체 이용하여 만들어보기 : 프로토타입으로 바꿔보기</p>
+    <h3>객체는 속성과 메서드(=함수,기능)로 이어져있다!</h3>
+    <p>객체화시키는 이유:기능별로 묶어서 관리하기 편하게 하기위해</p>
+    <p>객체화만 시켜버리면 각각의 메모리를 쓰기 때문에 메모리 낭비가 심해진다. 그래서 프로토타입을 사용.</p>
+    <p>프로토타입은 하나의 메서드를 공유하기때문에 메모리낭비가 심하지 않다. 많이 쓰는 방법임.</p>
+
+    <script>
+
+        function Calc(num1, num2) {
+            // 속성
+            this.num1 = num1;
+            this.num2 = num2;
+        }
+
+
+        // 프로토타입으로 변경하기
+        // 1.메소드만 분리시킨다(속성값만 남게된다.)
+        // 2. 분리시킨 메소드를 바깥에 붙여넣는다.
+        // 3. this.을 삭제한다.
+        // 4. 해당객체명을 삭제한 자리에 쓰고 .prototype.을 써준다.
+
+
+        // 메서드
+        Calc.prototype.add = function() {
+            var result = this.num1 + this.num2; //객체를 쓸 때는 속성을 이용(속성값 사용하지않음.)
+            return result;
+        }
+
+        Calc.prototype.sub = function() {
+            var result = this.num1 - this.num2;
+            return result;
+        }
+
+        Calc.prototype.division = function() {
+            var result = this.num1 / this.num2;
+            return result;
+        }
+
+        Calc.prototype.multiple = function() {
+            var result = this.num1 * this.num2;
+            return result;
+        }
+        
+        var num1 = Number(prompt("숫자를 입력하세요", 0));
+        var num2 = Number(prompt("숫자를 입력하세요", 0));
+
+        //var로 변수 생성하여 객체생성(데이터 넣어주었음.)
+        var calc = new Calc(num1, num2);
+
+        // 메서드를 실행하기위해서 내가 생성한 변수, 함수기능의 이름을 넣는다.
+        document.write(calc.add() + "<br />");
+        document.write(calc.sub() + "<br />");
+        document.write(calc.division() + "<br />");
+        document.write(calc.multiple() + "<br />");
+        
+        
+
+
+
+        
+    </script>
+
+
+<!-- 
+var num1 = Number(prompt("숫자를 입력하세요", 0));
+        var num2 = Number(prompt("숫자를 입력하세요", 0));
+
+        function add(a, b) {
+            var result = a + b;
+            return result;
+        }
+        function sub(a, b) {
+            var result = a - b;
+            return result;
+        }
+        function division(a, b) {
+            var result = a / b;
+            return result;
+        }
+        function multiple(a, b) {
+            var result = a * b;
+            return result;
+        }
+
+
+        document.write(add(num1, num2) + "<br />");
+        document.write(sub(num1, num2) + "<br />");
+        document.write(division(num1, num2) + "<br />");
+        document.write(multiple(num1, num2) + "<br />"); -->
+</body>
+</html>

@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>계산기만들기-객체</title>
+</head>
+<body>
+    <h1>함수 이용한 계산기 만들기(매개변수, 리턴이용)</h1>
+    <p>덧셈,뺄셈,나눗셈,곱셈 + 매개변수2개 + 결과값은 리턴.</p>
+    <p>객체 이용하여 만들어보기</p>
+    <h3>객체는 속성과 메서드(=함수,기능)로 이어져있다!</h3>
+
+    <script>
+
+    
+
+
+        function Calc(num1, num2) {
+            // 속성
+            this.num1 = num1;
+            this.num2 = num2;
+
+            // 메서드
+            this.add = function() {
+                var result = this.num1 + this.num2; //객체를 쓸 때는 속성을 이용(속성값 사용하지않음.)
+                return result;
+            }
+
+            this.sub = function() {
+                var result = this.num1 - this.num2;
+                return result;
+            }
+
+            this.division = function() {
+                var result = this.num1 / this.num2;
+                return result;
+            }
+
+            this.multiple = function() {
+                var result = this.num1 * this.num2;
+                return result;
+            }
+        }
+        
+        var num1 = Number(prompt("숫자를 입력하세요", 0));
+        var num2 = Number(prompt("숫자를 입력하세요", 0));
+
+        //var로 변수 생성하여 객체생성(데이터 넣어주었음.)
+        var calc = new Calc(num1, num2);
+
+        // 메서드를 실행하기위해서 내가 생성한 변수, 함수기능의 이름을 넣는다.
+        document.write(calc.add() + "<br />");
+        document.write(calc.sub() + "<br />");
+        document.write(calc.division() + "<br />");
+        document.write(calc.multiple() + "<br />");
+        
+        
+
+
+
+        
+    </script>
+
+
+<!-- 
+var num1 = Number(prompt("숫자를 입력하세요", 0));
+        var num2 = Number(prompt("숫자를 입력하세요", 0));
+
+        function add(a, b) {
+            var result = a + b;
+            return result;
+        }
+        function sub(a, b) {
+            var result = a - b;
+            return result;
+        }
+        function division(a, b) {
+            var result = a / b;
+            return result;
+        }
+        function multiple(a, b) {
+            var result = a * b;
+            return result;
+        }
+
+
+        document.write(add(num1, num2) + "<br />");
+        document.write(sub(num1, num2) + "<br />");
+        document.write(division(num1, num2) + "<br />");
+        document.write(multiple(num1, num2) + "<br />"); -->
+</body>
+</html>
