@@ -7,33 +7,48 @@
     <title>계산기만들기</title>
 
     <style>
-        
-        /* 화면 출력 부분 */
+
+
         table { border-collapse: collapse; 
         }
 
+        /* 화면 출력 부분 */
+        
         .display input {
             border-style: none;
             text-align: right;
-            height: 40px;
+            height: 100%;
             width: 100%;
-            font-size: 3rem;
+            font-size: 2rem;
         }
-
-    
 
         .display > td {
             width:280px;
-            padding: 20px 10px;
+            padding: 0%;
+            background-color: rgb(231, 231, 231);
+        }
+
+        tr:nth-of-type(2) > td {
+            padding: 0%;
+        }
+
+        tr:nth-of-type(2) > td input {
+            font-size: 3rem;
+            text-align: right;
         }
 
 
-        /* 키패드 크기 부분 */
+        /* 키패드 부분 */
 
-        td{
+        tr td{
             text-align: center;
             padding: 20px 30px;
-            font-size: 2rem;
+            background-color: rgb(78, 78, 78);
+            border
+        }
+
+        tr td:nth-last-of-type(4n+1) {
+            background-color: orange;
         }
 
 
@@ -49,7 +64,12 @@
     <table border="1">
         <tr class="display">
             <td colspan="4">
-                <input type="text" id="display" value="0" disabled>
+                <input type="text" id="display" value="" disabled>
+            </td>
+        </tr>
+        <tr class="display">
+            <td colspan="4">
+                <input type="text" id="display" value="" disabled>
             </td>
         </tr>
         <tr>
