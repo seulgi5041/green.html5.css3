@@ -31,9 +31,271 @@ ul { list-style: none; }
     z-index: 1; 
 }
 
-#main_header > .gnb {
+#main_header .gnb {
     overflow: hidden;
     position: relative;
+    margin: 0 auto;
 }
 
-#main_header > .gnb
+#main_header .logo {
+    float: left;
+    width: 190px;
+}
+
+#main_header ul {
+    float: left;
+    /* li를 정렬하기위해서. 부모태그에 오버플로우-히든해준것 */
+    overflow: hidden;
+    padding-left: 10px;
+    /* 계산해주는것.(간단하게 계산할 수 있음-100%에서 217px을 뺀 만큼 width를 지정하겠다는 뜻. */
+    /* width: calc(100% - 217px); */
+}
+
+#main_header ul > li {
+    float: left;
+    padding: 22px 17px;
+}
+
+#main_header ul > li:nth-child(4), li:nth-child(5) {
+    display: none; 
+}
+
+#main_header .setting {
+    float: right;
+    width: 21px;
+    text-align: right;
+    padding-top: 12px;
+}
+
+#main_header .trigger {
+    float: right;
+    width: 23px;
+    text-align: right;
+    padding-top: 4px;
+    display: none;
+}
+
+#main_header .trigger .close {
+    display: none;
+}
+
+
+/* active_path(하얀색), active_bar(주황색) */
+
+#main_header > .active_path {
+    position: fixed;
+    width: 100%;
+    height: 1px;
+    background: #D8D8D8;
+    /* gnb_contanier의 높이가 60px이므로 top을 60으로 해줘야 흰색 선이 보일 것 */
+    top: 60px;
+    z-index: 1;
+}
+
+#main_header > .active_path > .active_bar {
+    width: 81px;
+    height: 1px;
+    background: tomato;
+    display: none;
+}
+
+/* 하위메뉴 */
+
+#main_header > .lnb_container {
+    display: none;
+    background: black;
+    height: 330px;
+    width: 100%;
+    position: fixed;
+    /* gnb_contanier의 높이60px+ .active_path 높이1px이라서 top을 61으로 해줘야 하위메뉴가 제대로 보임 */
+    top: 61px;
+    z-index: 1;
+}
+
+#main_header > .lnb_container > .lnb {
+    overflow: hidden;
+    margin: 0 auto;
+    display: none;
+}
+
+#main_header > .lnb_container > .lnb > div {
+    float: left;
+}
+
+.show {
+    display: block;
+}
+
+.hide {
+    display: none;
+}
+
+.appear {
+    animation: fade-in 0.5s;
+}
+
+.disappear {
+    animation: fade-out 0.5s;
+}
+
+@keyframes fade-in {
+    from {
+        /* 투명도지정 */
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fade-out {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+    }
+}
+
+
+/* 검색 창 */
+
+#main_header > #search_box {
+    position: relative;
+    top: 200px;
+}
+
+#main_header > #search_box > div#search_bar {
+    width: 650px;
+    margin: 0 auto;
+}
+
+#main_header > #search_box > div#current_location {
+    width: 300px;
+    height: 35px;
+    margin: 0 auto;
+    background: rgb(0, 0, 0, 0.7);
+    border-radius: 5px;
+    padding: 0 10px;
+    overflow: hidden;
+}
+
+#main_header > #search_box > div#current_location > div:nth-child(1) {
+    float: left;
+    text-align: center;
+    line-height: 35px;
+}
+
+#main_header > #search_box > div#current_location > div:nth-child(2) {
+    float: right;
+    text-align: center;
+    line-height: 35px;
+}
+
+
+
+
+
+
+/* 푸터 */
+
+#main_footer {
+    height: 150px;
+}
+
+#main_footer > div:nth-child(1) {
+    background: rgb(240, 240, 240);
+    height: 50px;
+    text-align: center;
+    line-height: 50px;
+}
+
+#main_footer > div:nth-child(2) {
+    background: white
+    height: 100px;
+    padding-top: 30px;
+}
+
+#main_footer > div:nth-child(2) > div {
+    /* width: 100vw; 를 사용하지 않도록 주의; 스크롤이 생긴다 */
+    /* width: 100vw; 해놓고 확인해보자(스크롤 길이만큼을 포함하기 때문에 옆에 공백이 보일 것) */
+    width: 100%;
+    margin: 0 auto;
+    font-size: 13px;
+    text-align: center;
+}
+
+
+
+
+/* 미디어 쿼리: 반드시 미디어쿼리를 쓰고자하는 해당 태그 하단에 작성해 줘야 한다.(맘 편하게 묶어서 하단에 작성하자.) */
+@media screen and (max-width: 767px) {
+    #main_header {
+        background: url("../img/425x450.jpg");
+        background-size: cover;
+    }
+
+    #main_header .gnb, .lnb {
+        width: 90vw;
+    }
+
+    #main_header ul {
+        display: none;
+    }
+
+    #main_header .setting {
+        display: none;
+    }
+
+    #main_header .trigger {
+        display: block;
+    }
+
+    #main_header > #search_box > div#search_bar {
+        width: 85vw;
+
+    }
+
+    #main_header > #search_box > div#current_location {
+        width: 85vw;
+    }
+
+    #main_footer > div:nth-child(2) > div {
+        font-size: 11px;
+        text-align: left;
+    }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+    #main_header {
+        background: url("../img/768x450.jpg");
+        background-size: cover;
+    }
+
+    #main_header .gnb, .lnb {
+        /* 뷰포트:사용자가 볼 수 있는 가시영역(vw, vh도 있음) */
+        /* vw: 뷰포트width 비율-> 90%  */
+        /* vw와 vh는 스크롤바를 포함하여 넓이, 높이를 지정함. */
+        width: 90vw;
+    }
+
+    #main_header > #search_box > div#search_bar {
+        width: 85vw;
+    }
+
+    #main_footer > div:nth-child(2) > div {
+        font-size: 12px;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    #main_header {
+        background: url("../img/1024x450.jpg");
+        background-size: cover;
+    }
+
+    #main_header .gnb, .lnb {
+        width: 960px;
+    }
+
+}

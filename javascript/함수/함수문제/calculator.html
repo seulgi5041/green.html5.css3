@@ -4,86 +4,19 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>계산기만들기</title>
-
-    <style>
-        *{
-            margin: 0; padding: 0; 
-        }
-
-        table {
-            border-collapse: collapse;
-            width: 300px; 
-        }
-
-        td {
-            padding: 20px 0px;
-            text-align: center;
-        }
-
-        .input td {
-            padding: 5px 5px;
-        }
-
-        .input_1 td {
-            padding: 5px 5px;
-        }
-
-
-        input {
-            width: 100%;
-            border: none;
-            font-size: 2rem;
-            text-align: right;
-            background-color: gray;
-        }
-
-
-        /* 화면 출력 부분 */
-
-        
-
-        
-    </style>
-    
+    <title>꾸밈-계산기만들어보기(JS포함)</title>
+    <link rel="stylesheet" href="calculator.css">
+</head>
 <body>
+    
+    <h1>계산기 만들어보기</h1>
 
-    <table border="1";>
-        <tr class="input">
-            <td colspan="4"><input type="text" disabled></td>           
-        </tr>
-        <tr class="input_1">
-            <td colspan="4"><input type="text" disabled></td>
-        </tr>
-        <tr>
-            <td colspan="3">AC</td>
-            <td>/</td>
-        </tr>
-        <tr>
-            <td>7</td>
-            <td>8</td>
-            <td>9</td>
-            <td class="col">X</td>
-        </tr>
-        <tr>
-            <td>4</td>
-            <td>5</td>
-            <td>6</td>
-            <td class="col">-</td>
-        </tr>
-        <tr>
-            <td>3</td>
-            <td>2</td>
-            <td>1</td>
-            <td class="col">+</td>
-        </tr>      
-        <tr>
-            <td colspan="2">0</td>
-            <td>.</td>
-            <td class="col">=</td>
-        </tr>
+    <div class="top_display">
+        <input type="display" value="" disabled>
+    </div>
+    <div>
 
-    </table>
+    </div>
 
 </body>
 </html>

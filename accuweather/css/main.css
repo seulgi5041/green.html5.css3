@@ -1,1 +1,138 @@
 @charset "UTF-8";
+
+/* 메인콘텐츠 */
+#main_content {
+    background: #D8D8D8;
+}
+
+#main_content > div {
+    width: 960px;
+    margin: 0 auto;
+    overflow: hidden;
+    padding: 15px 0;
+}
+
+/* 메인 section 공통 */
+
+#main_content > #main_container > section {
+    width: 730px;
+    float: left;
+}
+
+/* 메인 article (section안에 있는) 공통 */
+#main_content > #main_container > section > article {
+    /* 반응형이기때문에 %로 줬음 */
+    width: 90%;
+}
+
+/* map부분-메인지도(기상레이더) */
+
+#main_content > #main_container > section > #weather_map {
+    height: 400px;
+    margin-bottom: 20px;
+    background: white;
+}
+
+#main_content > #main_container > section > #weather_map > #map {
+    width: 90%;
+    height: 360px;
+    z-index: 0 !important; /* 지도 z-index 반드시 강제 지정해줘야 함 */
+    margin: 0 auto;
+}
+
+/* 메인 날씨(기상 상태) */
+
+#main_content > #main_container > section > #weather_loacation {
+    height: 400px;
+    margin-bottom: 20px;
+    background: #D8D8D8;
+}
+
+#main_content > #main_container > section > #weather_loacation a {
+    display: inline-block;
+    /* 각각의 a태그에 좌우로 2px씩 margin값이 있기 때문에 8px를 빼줘야 50%씩 기상상태 표들이 위치를 나눠갖는다. */
+    width: calc(50% - 8px);   
+    height: 51px;
+    background: white;
+    margin: 2px;
+    /* 수평으로 가운데 정렬 */
+    line-height: 51px;
+}
+
+#main_content > #main_container > section > #weather_loacation a span {
+    display: inline-block;
+    font-size: 18px;
+}
+
+#main_content > #main_container > section > #weather_loacation a span:nth-child(1) {
+    width: 60%;
+}
+
+#main_content > #main_container > section > #weather_loacation a span:nth-child(2) {
+    width: 20%;
+}
+
+#main_content > #main_container > section > #weather_loacation a span:nth-child(3) {
+    width: 15%;
+}
+
+#main_content > #main_container > section > #weather_loacation a img {
+    width: 30px;
+    height: 30px;
+}
+
+/* 메인 추가기상 예보 */
+
+#main_content > #main_container > section > #weather_add {
+    height: 50px;
+    margin-bottom: 20px;
+    background: white;
+}
+
+/* 메인 aside 공통 */
+
+#main_content > #main_container > aside {
+    width: 210px;
+    float: right;
+}
+
+
+/* 미디어 쿼리: 반드시 미디어쿼리를 쓰고자하는 해당 태그 하단에 작성해 줘야 한다.(맘 편하게 묶어서 하단에 작성하자.) */
+@media screen and (max-width: 767px) {
+    #main_content > div {
+        width: 100%;
+    }
+
+    #main_content > #main_container > section {
+        width: 100%;
+    }
+
+    #main_content > #main_container > section > article {
+        width: 100%;
+    }
+
+    #main_content > #main_container > section > #weather_loacation a {
+        width: 100%;
+    }
+
+    #main_content > #main_container > aside {
+        /* 모바일 사이즈일때 광고를 아래로 떨어트린다. */
+        /* float 논 시켜주면 자연스럽게 아래로 떨어짐. */
+        float: none;
+    }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+    #main_content > div {
+        width: 100%;
+    }
+
+    #main_content > #main_container > section {
+        /* aside부분만큼을 빼주는 것 (개발자 도구로 보면 aside의 width가 210px임을 알 수 있음)*/
+        width: calc(100% - 210px);
+    }
+}
+
+@media screen and (min-width: 1024px) {
+
+}

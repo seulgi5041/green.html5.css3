@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Accuweather:컨텐츠부분뼈대</title>
+    <!-- 폰트어워썸 쓰는 법 : css링크 걸어줘야 쓸 수 있음. -->
+    <link rel="stylesheet" href="library/fontawesome-free-web/css/all.min.css">
+    <link rel="stylesheet" href="css/common.css">
+</head>
+<body>
+    <!-- 헤더 -->
+    <header id="main_header">
+        <div class="gnb_container">
+            <div class="gnb menu">
+                <div class="logo">
+                    <a href="#"><img src="img/logo.svg" alt="로고"></a> <!-- svg는 태그로 되어있지만 실제로 브라우저에서는 이미지로 나옴. -->
+                </div>
+                <ul class="nav">
+                    <li><a href="#">레이더 및 지도</a></li>
+                    <li><a href="#">동영상</a></li>
+                    <li><a href="#">악천후 기상</a></li>
+                    <!-- 모바일버전에서 보여질 두 개 -->
+                    <li><a href="#">개인화된 예보</a></li> 
+                    <li><a href="#">설정</a></li>
+                </ul>
+                <div class="setting"> <!-- 보통 피씨버전에서 나올 아이콘 -->
+                    <a href="#"><i class="fas fa-cog fa-lg"></i></a>
+                </div>
+                <!-- 반응형에서 나올 아이콘 --> 
+                <div class="trigger">
+                    <a href="#" class="mobile hamburger"><i class="fas fa-bars fa-lg"></i></a>
+                    <a href="#" class="mobile colse"><i class="fas fa-times fa-lg"></i></a>
+
+                </div> 
+            </div>
+        </div>
+        <div class="active_path">
+            <div class="active_bar"></div>
+        </div>
+        <div class="lnb_container">
+            <div class="lnb">
+                <div>레이더 및 지도</div>
+                <div>레이더</div>
+                <div>위성</div>
+                <div>대한민국 기상 레이더</div>
+            </div>
+            <div class="lnb">
+                <div>동영상</div>
+                <div>인기정보</div>
+                <div>전문가예보</div>
+                <div>스톰 체이서</div>
+            </div>
+            <div class="lnb">
+                <div>악천후 기상</div>
+                <div>허리케인</div>
+            </div>
+        </div>
+        <div class="search_box"></div>
+    </header>
+
+    <!-- 메인 -->
+    <div id="main_content">
+        <!-- 광고 -->
+        <div id="main_top">
+            <article>
+                <div>
+                    <img src="http://via.placeholder.com/960x250.png" alt="광고">
+                </div>
+            </article>
+        </div>
+        <!-- 실질적내용 -->
+        <div id="main_contariner">
+
+        </div>
+    </div>
+    <!-- <div id="mobile_menu"></div> -->
+
+    <!-- 푸터 -->
+    <footer></footer>
+</body>
+</html>

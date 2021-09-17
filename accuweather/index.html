@@ -7,7 +7,10 @@
     <title>Accuweather</title>
     <!-- 폰트어워썸 쓰는 법 : css링크 걸어줘야 쓸 수 있음. -->
     <link rel="stylesheet" href="library/fontawesome-free-web/css/all.min.css">
+    <!-- 부트스트랩 쓰는 법:css링크 걸기, 하단에 js도 걸기 -->
+    <link rel="stylesheet" href="library/bootstrap-5.1.1-dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/main.css">
 </head>
 <body>
     <!-- 헤더 -->
@@ -22,26 +25,148 @@
                     <li><a href="#">동영상</a></li>
                     <li><a href="#">악천후 기상</a></li>
                     <!-- 모바일버전에서 보여질 두 개 -->
-                    <!-- <li><a href="#">개인화된 예보</a></li> 
-                    <li><a href="#">설정</a></li> -->
+                    <li><a href="#">개인화된 예보</a></li> 
+                    <li><a href="#">설정</a></li>
                 </ul>
                 <div class="setting"> <!-- 보통 피씨버전에서 나올 아이콘 -->
-                    <a href="#"><i class="fas fa-cog"></i></a>
+                    <a href="#"><i class="fas fa-cog fa-lg"></i></a>
                 </div>
                 <!-- 반응형에서 나올 아이콘 --> 
-                <!-- <div class="trigger"></div>  -->
+                <div class="trigger">
+                    <a href="#" class="mobile hamburger"><i class="fas fa-bars fa-lg"></i></a>
+                    <a href="#" class="mobile close"><i class="fas fa-times fa-lg"></i></a>
+                </div> 
             </div>
         </div>
-        <div class="avtive_path"></div>
-        <div class="lnb_container"></div>
-        <div class="search_box"></div>
+        <div class="active_path">
+            <div class="active_bar"></div>
+        </div>
+        <div class="lnb_container">
+            <div class="lnb">
+                <div>레이더 및 지도</div>
+                <div>레이더</div>
+                <div>위성</div>
+                <div>대한민국 기상 레이더</div>
+            </div>
+            <div class="lnb">
+                <div>동영상</div>
+                <div>인기정보</div>
+                <div>전문가예보</div>
+                <div>스톰 체이서</div>
+            </div>
+            <div class="lnb">
+                <div>악천후 기상</div>
+                <div>허리케인</div>
+            </div>
+        </div>
+        <div id="search_box">
+            <!-- 검색바는 부트스트랩을 이용해보자 -->
+            <div id="search_bar">
+                <!-- 부트스트랩 + 폰트어워썸 함께 쓰임-->
+                <div class="input-group mb-3">
+                    <span class="input-group-text" id="basic-addon1"><i class="fas fa-search"></i></span>
+                    <input type="text" class="form-control" placeholder="위치 검색" aria-label="위치 검색" aria-describedby="basic-addon1">
+                </div>
+            </div>
+            <div id="current_location">
+                <div>종로 1,2,3,4 가동</div>
+                <div>대한민국</div>
+            </div>
+        </div>
     </header>
 
     <!-- 메인 -->
-    <div></div>
+    <div id="main_content">
+        <!-- 광고 -->
+        <div id="main_top">
+            <article>
+                <div>
+                    <img src="http://via.placeholder.com/960x250.png" alt="광고">
+                </div>
+            </article>
+        </div>
+        <!-- 실질적내용 -->
+        <div id="main_container">
+            <section>
+                <article id="weather_map">
+                    <h5>대한민국 기상 레이더</h5>
+                    <div id="map"></div>
+                </article>
+                <article id="weather_loacation">
+                    <h5>대한민국 기상 상태</h5>
+                    <div id="forecast">
+                        <a href="#">
+                            <span class="q">서울특별시</span>
+                            <span class="icon_weather"><img src="img/svg/016-sun.svg" alt="맑음"></span>
+                            <span class="temp">-℃</span>
+                        </a>
+                        <a href="#">
+                            <span class="q">인천광역시</span>
+                            <span class="icon_weather"><img src="img/svg/016-sun.svg" alt="맑음"></span>
+                            <span class="temp">-℃</span>
+                        </a>
+                        <a href="#">
+                            <span class="q">경기도</span>
+                            <span class="icon_weather"><img src="img/svg/016-sun.svg" alt="맑음"></span>
+                            <span class="temp">-℃</span>
+                        </a>
+                        <a href="#">
+                            <span class="q">광주광역시</span>
+                            <span class="icon_weather"><img src="img/svg/016-sun.svg" alt="맑음"></span>
+                            <span class="temp">-℃</span>
+                        </a>
+                        <a href="#">
+                            <span class="q">부산광역시</span>
+                            <span class="icon_weather"><img src="img/svg/016-sun.svg" alt="맑음"></span>
+                            <span class="temp">-℃</span>
+                        </a>
+                        <a href="#">
+                            <span class="q">제주특별시</span>
+                            <span class="icon_weather"><img src="img/svg/016-sun.svg" alt="맑음"></span>
+                            <span class="temp">-℃</span>
+                        </a>
+                    </div>
+                </article>
+                <article id="weather_add">
+                    <div id="add">
+                        추가 기상 예보 대한민국개
+                    </div>
+                </article>
+            </section>
+            <aside id="mian_aside">
+                <div>
+                    <img src="http://via.placeholder.com/210x400.png" alt="광고">
+                </div>
+                <div>
+                    <img src="http://via.placeholder.com/210x400.png" alt="광고">
+                </div>
+            </aside>
+        </div>
+    </div>
     <!-- <div id="mobile_menu"></div> -->
 
     <!-- 푸터 -->
-    <footer></footer>
+    <footer id="main_footer">
+        <div>
+            <a href="#">전 세계</a> >
+            <a href="#">아시아</a> >
+            <a href="#">대한민국</a> >
+            <a href="#">서울시</a> >
+            <a href="#">종로1.2.3.4가동</a>
+        </div>
+        <div>
+            <div>
+                © 2021 AccuWeather, Inc. "AccuWeather" and sun design are registered trademarks of AccuWeather, Inc. All Rights Reserved.
+            </div>
+            <div>
+                <a href="#">이용약관</a>
+                <a href="#">개인정보 보호정책</a>
+                <a href="#">쿠키 사용 정책</a>
+                <a href="#">TAG 공개</a>
+            </div>
+        </div>
+    </footer>
+<!-- 부트스트랩 쓰기:라이브러리에서 부트스트랩 js파일 첨부해주기 -->
+<script src="library/bootstrap-5.1.1-dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
