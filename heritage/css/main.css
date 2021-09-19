@@ -1,1 +1,61 @@
 @charset "UTF-8";
+
+/* 메인 */
+#container {
+    margin: 0 auto;
+    width: 100%;
+    position: relative;
+}
+
+/* 컨텐츠1-서치박스 있는 부분 */
+#container > #main_content {
+    height: 557px;
+    background: skyblue;
+    position: relative;
+    overflow: hidden;
+}
+
+#container> #main_content > .search_bar {
+    text-align: center;
+    padding: 50px 0px;
+}
+
+#container> #main_content > .search_bar a {
+    padding: 10px;
+}
+
+#container > #main_content > .search_big {
+    width: 100%;
+    overflow: hidden;
+    /* display: inline; */
+    
+}
+
+#container > #main_content > .search_big article {
+    float: left;
+    width: 300px;
+    height: 150px;
+    margin: 0 10px;
+    border: 1px solid black; 
+}
+
+#container > #main_content > .search_big div {
+    float: left;
+    width: 31.3%;
+    height: 150px;
+}
+
+
+
+
+#container > #main_content > .unesco_main {
+    margin: 0 auto;
+    margin-top: 100px;
+    position: relative;
+    overflow: hidden;
+}
+
+#container > #main_content > .unesco_main > div > img { float: left; }
+#container > #main_content > .unesco_main > div > ul { float: left; }
+#container > #main_content > .unesco_main > div > ul > li { float: left; }
+

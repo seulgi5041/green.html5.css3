@@ -14,8 +14,11 @@ ul { list-style: none; }
 /* 헤더 */
 
 #main_header {
+    margin: 0 auto;
+    width: 100%;
+    position: relative;
     height: 90px;
-    background: orange;
+    background: tomato;
     color: rgb(14, 11, 11);
 }
 
@@ -24,31 +27,3 @@ ul { list-style: none; }
 }
 
 
-#main_header > .gnb_container {
-    overflow: hidden;
-    position: relative;
-    margin: 0 auto;
-}
-
-#main_header > .gnb_container .logo {
-    float: left;
-    padding: 20px;
-}
-
-#main_header > .gnb_container .gnb > ul {
-    overflow: hidden;
-}
-
-#main_header > .gnb_container .gnb > ul > li {
-    float: left;
-    padding: 35px 40px;
-}
-
-#main_header > .gnb_container .gnb > ul > li:nth-child(7) {
-    float: right;
-    padding: 35px 40px;
-}
-
-
-
-#main_header > .lnb_container { display: none; }
