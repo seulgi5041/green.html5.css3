@@ -34,6 +34,16 @@ header {
     /* overflow: hidden; */
 }
 
+
+nav .brand_logo {
+    display: block;
+    padding: 16px 0 0;
+    /* height: 114px;
+    line-height: 11px;
+    text-align: center;
+    margin: 0 auto; */
+}
+
 .container > .logo > div { 
     /* float: right;  */
     position: absolute;
@@ -45,7 +55,8 @@ header {
     overflow: hidden;
 
     position: absolute;
-    top: 80px;
+    /* top: 80px; */
+    margin: 0;
 } 
 
 .container > ul > li { 
@@ -68,5 +79,111 @@ header {
 .container > ul > li a { 
     color: black;
     line-height: 77px;
+}
+
+
+
+
+
+
+
+
+/* 푸터 */
+/* 푸터-탑 */
+
+#footer_top { 
+    width: 100%;
+    background: #f7f7f7;
+    height: 64px;
+    border: 1px solid #f7f7f7;
+}
+
+
+#footer_top > #footer_bar { 
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+#footer_top > #footer_bar > .footer_left {
+    overflow: hidden;
+    float: left;
+    width: 80%; 
+}
+#footer_top > #footer_bar > .footer_left > li { 
+    float: left; 
+
+}
+#footer_top > #footer_bar > .footer_left > li a {
+    line-height: 64px;
+    padding: 20px;
+    font-size: 14px;
+}
+
+/* 푸터-sns */
+#footer_top > #footer_bar > .footer_right {
+    overflow: hidden;
+    float: right;
+    /* width: 20%;  */
+}
+#footer_top > #footer_bar > .footer_right > li { 
+    float: left; 
+}
+
+#footer_top > #footer_bar > .footer_right > li > a {
+    line-height: 64px;
+    padding: 10px;
+    font-size: 14px;
+}
+
+
+/* 푸터-로고 */
+#footer_bottom {
+    position: relative;
+    max-width: 1200px;
+    margin: 0 auto;
+    
+    overflow: hidden;
+}
+
+#footer_bottom > .footer_title {
+    margin: 20px 0;
+    width: 177px;
+
+    float: left;
+}
+
+#footer_bottom > .bottom_rights {
+    margin-top: 30px;
+    height: 130px;
+    width: 80%;
+}
+#footer_bottom > .bottom_rights > ul { 
+    overflow: hidden; 
+    
+}
+#footer_bottom > .bottom_rights > ul > li { 
+    float: left; 
+    font-size: 14px;
+    line-height: 23px;
+    padding: 0 15px;
+
+}
+
+#footer_bottom > .bottom_rights > ul > .block {
+    clear: both;
+    display: block;
+}
+
+
+#footer_bottom > .bottom_rights > .wa_mark { 
+    position: absolute;
+    top: 24px;
+    right: 5px;
+}
+
+.footer_copyright {
+    clear: both;
+    font-size: 14px;
+    padding: 0 15px;
 }
 
