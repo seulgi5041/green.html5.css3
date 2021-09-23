@@ -3,27 +3,85 @@
 
 /* 초기화 */
 * { 
-    margin: 0; padding: 0; 
+    margin: 0; padding: 0; border: 0;
     font-family: Arial, 'sans-serif';
 }
 a { text-decoration: none !important; }
 img { border: 0; }
-ul { list-style: none; }
+ol, ul {
+	list-style: none; border: 0; margin: 0; padding: 0;
+}
 
 
 /* 헤더 */
-
 #main_header {
+    max-width: 1180px;
     margin: 0 auto;
-    width: 100%;
-    position: relative;
-    height: 90px;
-    background: tomato;
-    color: rgb(14, 11, 11);
+
+    background-color: burlywood;
 }
 
-#main_header a {
-    color: rgb(14, 11, 11);;
+#main_header > #gnb_coontainer {
+    max-width: 1180px;
+    height: 83px;
+    margin: 0 auto;
+
+    /* .logo .gnb .ham_ 을 float 시키기 위해서 */
+    overflow: hidden;
 }
+
+#main_header > .gnb_container > .logo { 
+    overflow: hidden;
+    float: left;
+    line-height: 83px;
+    padding: 20px;
+}
+#main_header > .gnb_container > .logo > img { float: left; }
+
+#main_header > .gnb_container > .gnb { 
+    float: left;
+    margin-left: 5%;
+    margin-right: 5%;
+}
+
+#main_header > .gnb_container > .gnb > ul { 
+    overflow: hidden;
+    margin-bottom: none;
+}
+
+#main_header > .gnb_container > .gnb > ul > li { 
+    float: left; 
+    padding: 20px; 
+    line-height: 83px;
+}
+#main_header > .gnb_container > .ham_ { float: right; }
+
+#main_header > .gnb_container > .ham_ > .ham_btn { 
+    float: right;
+    line-height: 83px; 
+    padding: 20px;
+} 
+
+
+/* float 속성 해제하는 방법 */
+.gnb_container::after {
+    content: '';
+    display: block;
+    clear: both;
+}
+
+
+/* 하위메뉴 */
+.lnb_container { display: none; }
+
+
+/* gnb_menu:hover했을때 하위메뉴 펼쳐짐 */
+
+
+
+
+
+
+
 
 

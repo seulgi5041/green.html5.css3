@@ -1,0 +1,95 @@
+@charset "UTF-8";
+/* 어느 홈페이지나 다 가지고 있는 공통적인 부분들 : 주로 헤더랑 푸터같은 것들. */
+
+/* 초기화코드 */
+* { 
+    margin: 0; padding: 0; border: 0;
+    font-family: Arial, 'sans-serif';
+}
+a { text-decoration: none !important; }
+img { border: 0; }
+ol, ul {
+	list-style: none; border: 0; margin: 0; padding: 0;
+}
+
+
+/*  */
+
+#main_header {
+    position: relative;
+}
+
+.gnb_box {
+    max-width: 1180px;
+    margin: 0 auto;
+    height: 86px;
+
+    background: lightcoral;
+}
+
+.gnb_box > .logo {
+    float: left;
+    margin-top: 12px;
+    margin-left: 5px;
+}
+
+.gnb_box > .gnb_menu {
+    float: left;
+}
+
+.gnb_box > .gnb_menu > ul { overflow: hidden; }
+.gnb_box > .gnb_menu > ul > li { 
+    float: left;
+    line-height: 86px;
+}
+
+.gnb_box > .gnb_menu > ul > li:first-child {
+    margin-left: 20px;
+}
+
+.gnb_box > .gnb_menu > ul > li a {
+    padding: 0 30px;
+    line-height: 1.5;
+    color: black;
+    font-size: 1rem;
+    font-weight: 700;
+}
+
+.gnb_box > .all_btn {
+    float: right;
+    line-height: 86px;
+    padding-right: 30px;
+}
+
+.gnb_box > .all_btn > a {
+    color: black;
+    font-size: 1rem;
+    font-weight: 700;
+}
+
+.gnb_box {
+    content: '';
+    clear: both;
+    display: block;
+}
+
+
+#lnb_container { display: none; }
+
+
+
+
+
+
+/* 미디어 쿼리: 반드시 미디어쿼리를 쓰고자하는 해당 태그 하단에 작성해 줘야 한다.(맘 편하게 묶어서 하단에 작성하자.) */
+@media screen and (max-width: 767px) {
+
+}
+
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+    
+}
+
+@media screen and (min-width: 1024px) {
+   
+}

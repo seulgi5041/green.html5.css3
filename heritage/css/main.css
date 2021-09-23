@@ -1,61 +1,176 @@
 @charset "UTF-8";
 
 /* 메인 */
+
+
+
+/* 배경 */
 #container {
-    margin: 0 auto;
-    width: 100%;
     position: relative;
-}
-
-/* 컨텐츠1-서치박스 있는 부분 */
-#container > #main_content {
-    height: 557px;
-    background: skyblue;
-    position: relative;
-    overflow: hidden;
-}
-
-#container> #main_content > .search_bar {
-    text-align: center;
-    padding: 50px 0px;
-}
-
-#container> #main_content > .search_bar a {
-    padding: 10px;
-}
-
-#container > #main_content > .search_big {
     width: 100%;
-    overflow: hidden;
-    /* display: inline; */
     
 }
 
-#container > #main_content > .search_big article {
-    float: left;
-    width: 300px;
-    height: 150px;
-    margin: 0 10px;
-    border: 1px solid black; 
-}
-
-#container > #main_content > .search_big div {
-    float: left;
-    width: 31.3%;
-    height: 150px;
-}
-
-
-
-
-#container > #main_content > .unesco_main {
-    margin: 0 auto;
-    margin-top: 100px;
+#container > #main_content {
     position: relative;
-    overflow: hidden;
+    margin: 0 auto;
+    max-width: 1180px;
+    height: 557px;
+    
+    background-color: cornsilk;
 }
 
-#container > #main_content > .unesco_main > div > img { float: left; }
-#container > #main_content > .unesco_main > div > ul { float: left; }
-#container > #main_content > .unesco_main > div > ul > li { float: left; }
 
+
+/* 서치박스 */
+
+#main_content > .search_box {
+    position: absolute;
+    margin: 30px auto;
+    margin-left: 20%;
+    margin-right: 20%;
+}
+
+.search_box > input {
+    width: 560px;
+    height: 60px;
+    padding: 10px 15px 10px 20px;
+    background: #fff;
+    box-sizing: border-box;
+    border-radius: 30px;
+    box-shadow: 3px 3px 3px rgb(0 0 0 / 10%);
+    border: 2px solid #2e52b7;
+}
+
+.search_box > input:focus { outline: 0; }
+
+.search_box >button {
+    width: 123px;
+    height: 60px;
+    border-radius: 30px;
+    background: #fff;
+    color: #23398d;
+    font-size: 17px;
+    box-shadow: 3px 3px 3px rgb(0 0 0 / 10%);
+    border: 2px solid #2e52b7;
+    cursor: pointer;
+    box-sizing: border-box;
+    text-align: center;
+    line-height: 56px;
+    font-weight: normal;
+    margin-left: 10px;
+}
+
+/* 박스 세 개 부분 */
+.search_big {
+    position: absolute;
+    max-width: 1180px;
+    margin-bottom: 60px;
+    top: 30%;
+}
+
+#unesco_item {
+    overflow: hidden; 
+    float: left;
+    
+    width: 364px;
+    height: 142px;
+    
+    background: rgba(255,255,255,.6);
+    border: 1px solid rgba(83,107,174,.6);
+    border-radius: 4px;
+    min-height: 96px;
+    box-shadow: 3px 3px 15px rgb(0 0 0 / 25%);
+    margin: 14px;
+}
+
+
+.search_big > #unesco_item { overflow: hidden; }
+
+
+#unesco_item > .item_box { 
+    overflow: hidden;
+    padding: 22px 22px 22px;
+
+}
+#unesco_item > .item_box > img { float: left; }
+
+#unesco_item > .item_box > .text-box { overflow: hidden; }
+
+#unesco_item > .item_box > .text-box h1 { 
+    float: left; 
+    color: #2f3b68;
+    font-size: 20px;
+    margin: 10px 0;
+    font-weight: 600;
+}
+#unesco_item > .item_box > .text-box p { 
+    float: left;
+    font-size: 13px;
+    color: #555;
+    font-weight: normal; 
+}
+
+.search_big::after {
+    content: '';
+    display: block;
+    clear: both;
+}
+
+
+/* 유네스코등재유산 */
+
+.unesco_main {
+    position: absolute;
+    max-width: 1180px;
+    height: 197px;
+    bottom: 0;
+}
+
+.unesco_main > div { 
+    overflow: hidden;
+    margin-top: 30px;
+}
+
+.unesco_main > div > img {
+    padding: 30px;
+}
+
+.unesco_main > div > ul { 
+    overflow: hidden;
+    float: right; 
+    padding: 0px 50px 50px 180px
+}
+
+.unesco_main::after {
+    content: '';
+    display: block;
+    clear: both;
+}
+
+.unesco_main > div > ul > li { float: left; }
+
+.unesco_main > div > ul > li a { 
+    padding: 20px;
+    line-height: 137px; 
+}
+
+
+
+
+
+
+
+
+@media screen and (max-width: 767px) {}
+
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+    
+}
+
+@media screen and (min-width: 1024px) {
+    #container {
+        background: url("../img/bg_main_visual.jpg") no-repeat;
+        background-size: 100% 557px;
+    }
+}
