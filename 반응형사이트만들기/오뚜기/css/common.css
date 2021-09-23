@@ -1,0 +1,72 @@
+@charset "UTF-8";
+/* 어느 홈페이지나 다 가지고 있는 공통적인 부분들 : 주로 헤더랑 푸터같은 것들. */
+
+/* 초기화 */
+* { 
+    margin: 0; padding: 0; 
+    font-family: Arial, 'sans-serif';
+}
+a { text-decoration: none !important; }
+img { border: 0; }
+ul { list-style: none; }
+
+
+/* 헤더 */
+header {
+    display: block;
+    width: 100%;
+    min-height: 190px;
+    background: #fef100;
+}
+
+.container {
+    position: relative;
+    margin: 0 auto;
+    max-width: 1200px;
+    height: 100%;
+}
+
+.container > .logo {
+    /* position: absolute; 굳이 공식대로 안해도.
+    margin: 0 auto; */
+    width: 100%;
+    text-align: center;
+    /* overflow: hidden; */
+}
+
+.container > .logo > div { 
+    /* float: right;  */
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+
+.container > ul { 
+    overflow: hidden;
+
+    position: absolute;
+    top: 80px;
+} 
+
+.container > ul > li { 
+    float: left;
+    /* 크기 지정 */
+    text-align: center;
+    width: 199px;
+    height: 77px;
+    background: #fef100;
+    border-right: 1px solid black;
+}
+
+.container > ul > li:last-child { border-right: none; }
+
+.gnb_menu::after {
+    content: '';
+    clear: both;
+    display: block;
+}
+.container > ul > li a { 
+    color: black;
+    line-height: 77px;
+}
+
