@@ -219,6 +219,7 @@
 .social_box > .social_title p {
     text-align: center;
     font-size: 16px;
+    margin: 16px 0;
 }
 
 .social_box > .social_bar {
