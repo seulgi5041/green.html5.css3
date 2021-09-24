@@ -35,13 +35,14 @@
 #more_view > .container {
     /* position: relative; */
     max-width: 1200px;
-    /* width: 100%; */
+    width: 100%;
     overflow: hidden;
 }
 
 #more_view > .container article {
     float: left;
-    box-sizing: inherit
+    box-sizing: inherit;
+    
 }
 
 .container::after {
@@ -288,7 +289,7 @@
 
 
 
-@media screen and (max-width: 639px) {
+@media screen and (max-width: 640px) {
    .main_roll > .box_wrap {
         display: none;
    }
@@ -296,14 +297,19 @@
   .main_roll > .box_trigger {
     display: block;
 }
+
+
+
 }
 
-@media screen and (min-width: 768px) and (max-width: 1023px) {
- 
+@media screen and (min-width: 641px) and (max-width: 1023px) {
+   
 }
 
 @media screen and (min-width: 1024px) {
     #top_wrap { 
         max-width: 100%;
     }
+
+
 }
