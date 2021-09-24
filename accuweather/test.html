@@ -1,0 +1,60 @@
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>지도 생성하기</title>
+    
+</head>
+<body>
+<!-- 지도를 표시할 div 입니다 (반드시 필요!) id=는 반드시 map -->
+<!-- <div id="map" style="width:100%;height:350px;"></div>
+
+
+
+
+
+<script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=69a6d4e23c9c7042f38ee20b0b50ac74"></script> -->
+
+
+test파일은 새로운 것을 할 때 해보는 페이지. 만들어두면 유용하다.
+
+<br /><br /><br /><br />
+
+
+<script>
+// var mapContainer = document.getElementById('map'), // 지도를 표시할 div 
+//     mapOption = { 
+//         center: new kakao.maps.LatLng(33.450701, 126.570667), // 지도의 중심좌표 (js에서 new가 나오면 무조건 객체!)
+//         level: 3 // 지도의 확대 레벨
+//     };
+
+// 지도를 표시할 div와  지도 옵션으로  지도를 생성합니다
+// new를 통해 생성 할 때 ( , ) 값들을 넣어줌. - 이 값들은 위에서 생성한 것.
+// var map = new kakao.maps.Map(mapContainer, mapOption); 
+
+
+
+
+
+// js json 쓰는법 (키와 키값으로 이루어져 있음.)
+
+// 선언 = {"key" : "키값", "key" : "키값", "key" : "키값", "key" : "키값", "key" : "키값" };
+//  { } 안에는 어떠한 데이터도 다 올 수 있음. (영어, 숫자, 한글, json, 배열 등등 데이터 전부 가능)
+//  단, 키는 꼭 영어로 작성한다.
+// 키와, 키값은 꼭 쌍따옴표로 감싸준다.
+
+
+// json은 보기 편하게 주로 아래의 방식처럼 나열해서 적어준다.
+var member = { 
+             "neme": "이름",
+             "place": "인천",
+             "phone": "010-1234-5678"
+            };
+
+
+document.write(member.place);
+
+
+
+</script>
+</body>
+</html>
