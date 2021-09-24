@@ -44,14 +44,24 @@ test파일은 새로운 것을 할 때 해보는 페이지. 만들어두면 유�
 
 
 // json은 보기 편하게 주로 아래의 방식처럼 나열해서 적어준다.
+
+//개발자도구로 보면 member를 object(개체)로 인식함. 객체를 선언한것.
+// json객체형태. 
 var member = { 
              "neme": "이름",
              "place": "인천",
-             "phone": "010-1234-5678"
+             "phone": "010-1234-5678",
+             "number": "1",
+             "arr": [1,2,3]
             };
 
 
+document.write(member.place + "<br />");
+// 수정하는법
+member.place = "서울";
 document.write(member.place);
+document.write(member.arr);
+
 
 
 
