@@ -6,7 +6,7 @@
 
 .main_roll {
     position: relative;
-    height: 530px;
+    height: auto;
 }
 
 .main_roll > .box_wrap {
@@ -16,7 +16,7 @@
     padding: 0;
 }
 
-/* 반응형이미지 */
+/* 반응형이미지 반응형:609x420*/
 .main_roll >.box_trigger {
     position: relative;
     width: 100%;
@@ -26,23 +26,31 @@
 }
 
 
+
+
 /* 메인-바로가기 */
 
 #more_view {
+    
     margin: 20px 0;
+    width: 100%;
 }
 
 #more_view > .container {
     /* position: relative; */
-    max-width: 1200px;
-    width: 100%;
     overflow: hidden;
+    max-width: 1200px;
 }
 
-#more_view > .container article {
+#more_view > .container > .square_box {
     float: left;
-    box-sizing: inherit;
+    box-sizing: inherit;  
     
+    width: 24%;
+    height: 25%;
+    background: cornsilk;
+    
+    margin-right: 6px;
 }
 
 .container::after {
@@ -51,46 +59,42 @@
     display: table;
 }
 
-.square_box {
-    width: 288px;
-    height: 288px;
-    background: cornsilk;
-    
-    margin-right: 6px;
-}
-
-.last_btn > .square_box {   
+#more_view > .container > .square_box:last-child {
     margin-right: 0;
 }
 
 
 /* 메인-뉴스 */
+#news_view {
 
-.news_container {
+    width: 100%;
+}
+
+#news_view > .news_container {
     margin: 0 auto;
     max-width: 1200px;
     overflow: hidden;
 }
 
-.news_container > .news_box {
+#news_view > .news_container > .news_square {
     float: left;
 }
 
 .news_container::after {
     content: '';
     clear: both;
-    display: table;
+    display: block;
 }
 
 .news_square {
-    width: 288px;
-    height: 245px;
+    width: 24%;
+    height: 23%;
     background: cornsilk;
     
     margin-right: 6px;
 }
 
-.news_box:last-child {   
+#news_view > .news_container > .news_square:last-child {   
     margin-right: 0;
 }
 
@@ -99,16 +103,23 @@
 
 #main_event {
     margin-top: 50px;
+    width: 100%;
 }
 
-.event_container {
+#main_event > .event_container {
     margin: 0 auto;
     max-width: 1200px;
     overflow: hidden;
+
+    width: 100%;
 }
 
-.event_container > .box_event {
+#main_event > .event_container > .box_event {
     float: left;
+    height: auto;
+
+    /* width: 35%; */
+    height: auto;
 }
 
 
@@ -120,13 +131,20 @@
 
 .event_container > .box_event:nth-of-type(3) {
     margin-top: 25px;
+
+    /* width: 25%; */
 }
+
+/* #main_event > .event_container > .box_event:nth-of-type(2) {
+    width: 25%;
+    height: auto;
+} */
 
 
 /* 메인_인기상품 */
 
 #best_main {
-    background: url(../img/visual_06.jpg) ;
+    background: url(../img/visual_06.jpg) no-repeat center;
     height: 600px;
 
     margin-top: 70px;
@@ -139,13 +157,16 @@
 
 .best_container h1 {
     text-align: center;
+    width: 100%;
 }
 
 .best_container p {
     text-align: center;
+    width: 100%;
 }
 
-.best-slide {
+#best_main > .best_container > .best-slide {
+    width: 100%;
     margin-top: 80px;
 }
 
@@ -233,13 +254,13 @@
 .social_container > .social_bar > ul { 
     overflow: hidden;
     width: 100%;
-    height: 60px; 
+    /* height: 60px;  */
 }
 
 .social_container > .social_bar > ul > li { 
     float: left;
-    width: 25%;
-    height: 60px; 
+    /* width: 25%; */
+    /* height: 60px;  */
     line-height: 60px;
     text-align: center; 
 
@@ -254,25 +275,37 @@
 }
 
 
-
+/* sns이미지부분 */
 .social_content { 
-    overflow: hidden; 
-    width: 100%;
+    overflow: hidden;
 
-    text-align: center;
+    margin: 14px 0 20px 8px;
 }
-.social_content > .social_box { 
+
+.social_content > .social_square { 
     float: left;
-    
-    margin: 14px 0 20px 0;
+
     width: 25%;
+    /* margin: 14px 0 20px 0; */
     
 }
 
-.social_content > .social_box > p {
+.social_content > .social_square img {
+    max-width: 100%;
+    height: auto;
+
+}
+
+
+.social_content > .social_square p {
     font-size: 14px;
     color: #666;
+    width: 100%;
 }
+
+
+
+
 
 
 
@@ -296,6 +329,24 @@
 
   .main_roll > .box_trigger {
     display: block;
+  }
+
+
+  #more_view > .container > .square_box:nth-of-type(2) {
+      display: block;
+  }
+
+  
+  .best_container > .best-slide {
+    overflow: hidden;
+    width: 475px;
+}
+
+
+
+
+
+
 }
 
 
@@ -303,13 +354,29 @@
 }
 
 @media screen and (min-width: 641px) and (max-width: 1023px) {
-   
+    
 }
 
 @media screen and (min-width: 1024px) {
     #top_wrap { 
-        max-width: 100%;
+        margin: 0 auto;
     }
 
+
+
+    .best_container > .best-slide {
+        overflow: hidden;
+        width: 705px;
+    }
+
+
+
+
+
+
+
+
+
+    
 
 }
