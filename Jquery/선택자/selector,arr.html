@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="../jquery-3.6.0.min.js"></script>
+
+
+    <script>
+
+        $(function(){
+            $("#menu_1 li:even")
+            .css({
+                "background-color":"green",
+                "font-weight":"700"
+            });
+
+            $("#menu_1 li:odd").last()
+            .css({
+                "background-color":"yellow"
+            });
+
+        });
+
+        $(function(){
+            $("#menu_1 li:nth-child(4)")
+            .css({
+                "color":"blue"
+            });
+        });
+
+
+
+        $(function(){
+            $("#menu_2 li").eq(2)
+            .css({
+                "font-size":"19px",
+                "color":"pink"
+            });
+
+            $("#menu_2 li:It(2)")
+            .css({
+                "background-color":"skyblue"
+            });
+
+            $("#menu_2 li:gt(2)")
+            .css({
+                "background-color":"red"
+            });
+
+        });
+
+
+    </script>
+
+</head>
+<body>
+
+
+    <section>
+
+        <h2>탐색선택자 중 even/odd와 nth-child/nth-last-of-type의 차이점</h2>
+            <ul id="menu_1">
+                <li>내용1 : id가 첫번째 menu_1 면서 짝수는 초록+굵게, 홀수는 마지막 요소만! 노랑 odd/even #menu_1 li:even.</li>
+                <li>내용2</li>
+                <li>내용3</li>
+                <li>내용4 : id가 그냥 menu_1면서 네번째<strong>(인덱스번호아님)</strong>차례 요소 폰트만 파랑색.#menu_1 li:nth-child(4)</li>
+                <li>내용5</li>
+                <li>내용6 :::: #menu_1 li:odd").last()</li>
+            </ul>
+            <ul id="menu_2">
+                <li>내용1 </li>
+                <li>내용2</li>
+                <li>내용3 : id가 #menu_2인 아이의 두번째배열임!</li>
+                <li>내용4</li>
+                <li>내용5</li>
+                <li>내용6</li>
+            </ul>
+            <ul id="menu_1">
+                <li>내용1</li>
+                <li>내용2</li>
+                <li>내용3</li>
+                <li>내용4 : id가 그냥 menu_1면서 네번째<strong>(인덱스번호아님)</strong>차례 요소 폰트만 파랑색.#menu_1 li:nth-child(4)</li>
+                <li>내용5</li>
+                <li>내용6</li>
+            </ul>
+
+
+
+    </section>
+    
+
+    <h1>탐색 선택자</h1>
+
+    <h3>인덱스사용: 위치 탐색 선택자</h3>
+    <p>firs/last</p>
+    <p>even(짝수)/odd(홀수) : index를 기준 0도 짝수로 인식한다. (짝수 인덱스, 홀수 인덱스)</p>
+    <p>eq(내가 지정한 배열!) / It(내가 지정한 배열보다 작은) / gt(내가 지정한 배열보다 큰)</p>
+    <p>fist-of-type / last-of-type (각각의 무리 중, 그룹 중)</p>
+    <p>slice</p>
+    <p>only-chile : 그룹들 중 자식이 하나인 tag만 선택한다. 자식이 여러개인 그룹은 선택하지 않음.</p>
+    <hr />
+    <p>nth-child / nth-last-of-type (단순 숫자로) </p>
+
+
+
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+
+    <h4>배열관련메서드</h4>
+    <p>each() / $.each() </p>
+
+
+
+    <h3>속성 탐색 선택자</h3>
+
+    
+    
+
+</body>
+</html>

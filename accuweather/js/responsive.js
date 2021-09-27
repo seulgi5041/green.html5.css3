@@ -73,7 +73,7 @@ $(function(){
         "click" : function(){
 
             // 햄버거 메뉴 버튼이 보일때(햄버거 메뉴가 -교재215p-visible상태인가?로 판단)
-            if($(".mobile.hamburger").is(":visible") {
+            if($(".mobile.hamburger").is(":visible")) {
                 /* 모바일 닫기 버튼 show */
                 $(".mobile.hamburger").hide();
                 $(".mobile.close").show();
@@ -116,11 +116,12 @@ $(function(){
     $(window).resize(function() {
         var width = $(window).width(); //사용자가 보는 뷰포트 넓이 구하기
 
+        // 넓이가 767 이상이되면 모바일버전 해제 후 pc버전으로 변경
         if(width > 767) {
             $("li").eq(3).hide();
             $("li").eq(4).hide();
 
-            if($(".mobile.hamburger").is(":visible")) {
+            if($("#mobile_menu").is(":visible")) {
                 $(".mobile.hamburger").show();
                 $(".mobile.close").hide();
 
@@ -130,8 +131,11 @@ $(function(){
                 $("#main_footer").show();
 
                 $("#mobile_menu").hide();
+
             }
         }
+
+
 
     });
 

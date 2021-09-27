@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="../jquery-3.6.0.min.js"></script>
+
+
+    <script>
+        $(function() {
+            $(".txt1").parents()
+            .css({
+                "border": "2px dashed #00f"
+            });
+
+            $(".txt2").parents("div")
+            .css({
+                "border": "3px solid rgb(244 68 68)"
+            });
+
+            $("#wrap h2")
+            .css({
+                "background-color": "yellow",
+                "font-wight": "bold"
+            });
+
+        })
+
+
+
+        $(function () {
+            var style_1 = {
+                "background-color" : "blue",
+                "font-size": "9px"
+            }
+
+            $("#bro .txt").siblings()
+            .css(style_1);
+        });
+
+
+    </script>
+
+
+
+
+
+</head>
+<body>
+
+    <section>
+        <div>
+            <p class="txt1">txt1이 들어있는 section안의 div안의 p태그 (상위요소 - $("요소").parents() >> 상위 전체를 선택)</p>
+        </div>
+    </section>
+
+    <section>
+        <div id="wrap">
+            <h2>하위 요소 선택자 중 띄어쓰기는 띄어쓰기 앞이 포함한 모든 요소를 선택함. id가 wrap가 포함한 모든 h2를 선택함.</h2>
+            <p class="txt2">txt2 이 들어있는 section안의 div안의 p태그 (상위요소 - $("요소").parents("div") >> 상위 전체 중 내가 지정한 div만을 선택)</p>
+            <div>
+                <h2>id가 wrap 안의 또다른 div로 감싸여진 곳 안의 h2태그임.</h2>
+                <p>wrap 안의 또다른 div로 감싸여진 곳 안의 p태그</p>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <div id="bro">
+            <h3>전체 형제 요소 선택자 중 siblings는 자기 자신을 제외하고 나머지를 전부 선택함.</h3>
+            <p>내용1</p>
+            <p>내용2</p>
+            <p>내용3</p>
+            <p class="txt">내용4 (id는 bro, class명은 txt이면서 siblings선택자를 걸어줄 아이)</p>
+            <p>내용5</p>
+            <p>내용6</p>
+            <p>내용7</p>
+        </div>
+    </section>
+
+
+
+
+    
+    <p>요소=tag=elements</p>
+
+    <h1>직접선택자</h1>
+    <p>전체선택자,아이디,클래스,요소,그룹,종속선택자</p>
+
+    <h1>인접관계선택자</h1>
+    <p>부모요소 - $("요소").parent()</p>
+    <p>상위요소 - $("요소").parents() >> 상위 전체를 선택</p>
+    <p>가장가까운상위요소 - $("요소").closet("div") >> 상위 요소 중 가장 가까운 지정 "div" 선택 </p>
+    <p>하위요소 - $("요소선택하위요소").</p>
+    <p>자식요소 - $("요소선택 > 자식요소")</p>
+    <p>자식 요소들 - $("요소").children()</p>
+
+    <h4>동위선택자 와 같은 개념들~~</h4>
+    <p>형(이전)요소 - $("요소").prev()</p>
+    <p>형(이전) 요소들 - $("요소").prevAll()</p>
+    <p>지정한 형(이전) 요소들 - $("요소")prevUntil("요소명")</p>
+    <p>동생(다음)요소 선택자 - $("요소").next() / $("요소+다음요소)"</p>
+    <p>동생(다음)요소들 - $("요소").nextAll()</p>
+    <p>지정한 동생(다음) 요소들 - $("요소").nextUntil("지정요소")</p>
+    <p>전체형제 - $("요소").siblings</p>
+    <p>단,siblings 앞에 요소 지정하면 그 요소 지정한 자신은 제외하고 나머지 형제들을 선택함.</p>
+
+
+    <h3>여러개 한꺼번에 쓸 때 .css({ , , , , , }) 이런 식으로 쓰면 됨</h3>
+
+
+
+
+
+
+
+
+
+    
+</body>
+</html>
