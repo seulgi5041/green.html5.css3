@@ -219,7 +219,7 @@
 
 /* 메인_소셜SNS */
 
-#main_social {}
+#main_social { position: relative; }
 
 .social_container {
     max-width: 1200px;
@@ -266,8 +266,6 @@
 
 } 
 
-.indicator { display: none; }
-
 .social_container > .social_bar > ul > li a {
     padding: 0;
     font-weight: 700;
@@ -279,19 +277,24 @@
 .social_content { 
     overflow: hidden;
 
-    margin: 14px 0 20px 8px;
+    width: 100%;
+    margin: 14px 0;
 }
 
 .social_content > .social_square { 
     float: left;
+    width: 24.5%;
+    /* height: auto; */
+    margin-right: 6px;
 
-    width: 25%;
+    /* margin-right: 4px; */
     /* margin: 14px 0 20px 0; */
     
 }
 
+
 .social_content > .social_square img {
-    max-width: 100%;
+    width: 100%;
     height: auto;
 
 }
@@ -332,15 +335,7 @@
   }
 
 
-  #more_view > .container > .square_box:nth-of-type(2) {
-      display: block;
-  }
-
-  
-  .best_container > .best-slide {
-    overflow: hidden;
-    width: 475px;
-}
+ 
 
 
 

@@ -32,5 +32,24 @@
         </section>
     </div>
     <!-- https://github.com/flesler/jquery.scrollTo -->
+    <!-- 위에서부터 아래로 읽기 때문에 제이쿼리파일이 없으면 실행이 없됨. -->
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <script src="js/jquery.scrollTo.min.js"></script>
+
+    <script>
+
+        $(function(){
+            $('nav a').click(function(e){
+                // console.log(e);
+                // 0에서부터~~밀리세컨단위로 내려오는 시간으로 내려오는 것. 1초 정도 걸려서 내려간다.
+                $.scrollTo(this.hash || 0, 1000);
+                // console.log(this.hash);
+                // e에 링크된 페이지로 이동된 이벤트를 차단한다.
+                e.preventDefault();
+            });
+
+        });
+
+    </script>
 </body>
 </html>
