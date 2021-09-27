@@ -226,6 +226,24 @@ ul { list-style: none; }
 }
 
 
+/* 모바일메뉴 */
+#mobile_menu {
+    display: none;
+    background: black;
+    color: white;
+    height: 100vh;
+    width: 100vw;
+    /* vh, vw를 사용시 스크롤 현상이 생기는 것 방지(vh,vw는 사이즈가 어떻든지 무조건 스크롤이 생겨버림) */
+    overflow: hidden;  
+    position: fixed;  /* vh, vw를 사용시 스크롤 현상이 생기는 것 방지 */
+    top: 61px;
+}
+
+#mobile_menu a {
+    color: white;
+}
+
+
 
 
 /* 미디어 쿼리: 반드시 미디어쿼리를 쓰고자하는 해당 태그 하단에 작성해 줘야 한다.(맘 편하게 묶어서 하단에 작성하자.) */

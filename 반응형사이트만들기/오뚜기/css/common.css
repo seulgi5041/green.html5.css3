@@ -82,6 +82,8 @@ nav .brand_logo {
 .container > ul > li a { 
     color: black;
     line-height: 77px;
+    font-size: 1.2rem;
+    font-weight: bold;
 }
 
 header .gnb_trigger {
@@ -225,6 +227,11 @@ header .gnb_trigger {
 @media screen and (min-width: 641px) and (max-width: 1023px) {
     .container > ul > li {
         width: 16%;
+    }
+
+    .container > ul > li a { 
+        font-size: 1rem;
+        font-weight: 600;
     }
 }
 
