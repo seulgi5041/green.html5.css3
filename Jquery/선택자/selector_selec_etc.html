@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="../jquery-3.6.0.min.js"></script>
+
+    <script>
+
+        $(function(){
+            $("#inner_1 p:contains(내용1)")
+            .css({"background-color":"yellow"});
+
+            $("#inner_1 p:has(strong)") //has 자체가 해당 tag를 갖고있는가?의 의미. 
+            .css({"background-color":"blue"});
+
+            $("#outer_wrap").contents() //contents의 앞 요소에서 가장 가까운 자식요소들~~~을 선택
+            .css({"border":"1px dashed green"});
+
+            $("#inner_2 p").not(":first") //not()선택한 요소만 빼고 선택
+            .css({"background-color":"pink"});
+
+            $("#inner_2 p").eq(2).end() //end는 자기자신 이전의 필터를 뺀다고 생각하면 됨.
+            .css({
+                "color":"red",
+            });
+
+        });
+
+
+
+        $(function(){
+            $("#inner_3").find(".txt1") //하위 요소에서 필터링(id값 옆에 따로 tag 안 붙여줌.)
+            .css({"background-color":"green"});
+
+            $("#inner_3 p").filter(".txt2") //선택한 요소에서 필터링 (아이디값 옆에 p를 붙여줌)
+            .css({"background-color":"purple"});
+
+            $("#inner_4 p").filter(function(idx, obj){
+                console.log(idx);
+                return idx % 2 === 0;
+            })
+            .css({"background-color":"red"});
+
+        });
+
+
+    </script>
+</head>
+<body>
+
+    
+    <div id="outer_wrap">
+        <h1>콘텐츠 탐색 선택자</h1>
+        <section id="inner_1">
+            <h1>contains(), contents(), has()</h1>
+            <p>
+                <span>내용1</span>
+            </p>
+            <p>
+                <strong>내용2</strong>
+            </p>
+            <p>
+                <span>내용3</span>
+            </p>
+        </section>
+
+        <section id="inner_2">
+            <h1>not(), end()</h1>
+            <p>내용4</p>
+            <p>내용5</p>
+            <p>내용6</p>
+        </section>
+
+        <section id="inner_3">
+            <h2>find(), filter()</h2>
+            <p class="txt1">id가 inner_3에 class명이 txt1인 p태그</p>
+            <p class="txt2">id가 inner_3에 class명이 txt2인 p태그</p>
+        </section>
+
+        <section id="inner_4">
+            <h2>filter(function)</h2>
+            <p>index0</p>
+            <p>index1</p>
+            <p>index2</p>
+            <p>index3</p>
+        </section>
+    </div>
+    
+</body>
+</html>
