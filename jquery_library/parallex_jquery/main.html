@@ -44,5 +44,56 @@
             </section>
         </div>
     </div>
+
+
+
+    <script src="./js/jquery-2.2.4.min.js"></script>
+    <script src="./js/jquery.parallax-scroll.min.js"></script>
+
+    <script>
+        $(function(){
+            //메뉴 버튼 클릭 시 해당 위치로 이동(애니메이션 기능)
+            $(".scroll").click(function(e){
+                e.preventDefault();
+                $("html, body").animate({
+                    scrollTop: $(this.hash).offset().top
+                    //500은 시간이라고 보면 됨(내려갈때 부드럽게 내려가라고~~~ 그 시간만큼 내려가라~~)
+                }, 500);
+            });
+
+            //브라우저 크기 변화시 content 부분을 가운데 유지하기 위해
+            $(window).resize(function(){
+                $(".container")
+                .width($(window).width())
+                .height($(widow).height());
+
+                $(".container").each(function(){
+                    $(this).css("margin-left", ($(this).width()/2 * -1) + "px")
+                        .css("margin-top", ($(this).height()/2 * -1) + "px");
+                });
+            });
+
+
+            //1초에 한 번 실행
+            setTimeout(function(){
+                $(window).resize();
+            }, 1000);
+
+            //패럴렉스 실행
+            $(".bg-holder").parallaxScroll({
+                friction: 0.3
+            });
+
+            // 둘러보기 마우스 오버 시 이미지 변경
+            $(".icon img").hover(function(){
+                $(this).attr("src", $(this).attr("src").replace(".png", "_over.png"));
+            }, function(){
+                $(this).attr("src", $(this).attr("src").replace("_over.png", ".png"));
+            });
+
+
+        });
+
+    </script>
 </body>
 </html>
