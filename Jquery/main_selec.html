@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> 많이 쓰는 주요 선택자 </title>
+
+    <script src="./jquery-3.6.0.min.js"></script>
+
+    <script>
+
+        $(function(){
+            $(".wrap_1 p:first")
+            .text("내용1");
+
+
+            $(".wrap_1 p.active")
+            .removeClass("active")
+            .addClass("on");
+
+            $(".wrap_1 p:eq(2) a")
+            .attr("href", "http://www.naver.com");
+
+            $(".wrap_1 p:eq(3) input").val("Korea");
+
+            $(".wrap_2 p:first").after("<p>AFTER(추가1)</p>");
+            $(".wrap_2 p:first").before("<p>AFTER(추가2)</p>");
+
+            $(".wrap_3 p")
+            .unwrap()
+            .wrapInner("<strong />");
+        });
+
+    </script>
+
+
+
+
+</head>
+<body>
+    
+    <div class="wrap_1">
+        <p>텍스트1</p>
+        <p class="active">내용2</p>
+        <p><a href="#">NAVER</a></p>
+        <p>
+            <input type="text" value="HELLO">
+        </p>
+    </div>
+
+    <div class="wrap_2">
+        <p>내용5</p>
+        <p>내용6</p>
+    </div>
+
+    <div class="wrap_3">
+        <div>
+            <p>내용7</p>
+            <p>내용8</p>
+        </div>
+    </div>
+
+
+    
+</body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script src="./jquery-3.6.0.min.js"></script>
+
+
+    <script>
+
+        $(function(){
+            $("#myList li").not(":first")
+            .css({"background-color" : "yellow"});
+
+        });
+
+        $(function(){
+
+            $("#myList li:nth-child(3)")
+            .css({"background-color" : "blue"});
+
+        });
+
+
+    </script>
+</head>
+<body>
+    
+    <!-- 1. not메서드를 이용하여 첫번째 li 요소만 제외시킨 나머지 li 배경에 노란색을 적용하라 -->
+    <!-- 2. 제이쿼리 위치 탐색자를 이용해 세 번째 li 태그만 선택하여 배경색을 다른 것으로 바꿔보자 -->
+
+    <ul id="myList">
+        <li>text1</li>
+        <li>text2</li>
+        <li>text3</li>
+        <li>text4</li>
+    </ul>
+
+</body>
+</html>
