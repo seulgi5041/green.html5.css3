@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script src="../jquery-3.6.0.min.js"></script>
+
+    <script>
+
+        $(function(){
+            $("#wrap p:eq(2)").after("<p>After</p>");
+            $("<p>insertAter</p>").insertAfter("#wrap p:eq(1)");
+
+        });
+
+
+        $(function(){
+            var copyObj = $("#box1").children().clone();
+
+            $("#box2").remove(); //box2는 remove로 삭제 
+
+            $("#box3").empty(); // box3은 empty로 하위요소 비워버림
+            $("#box3").append(copyObj); // 비운 box3 요소 뒤에 복제했던 box1의 하위자식태그들을 넣는다.
+
+        });
+
+
+        $(function(){
+            $("strong").unwrap();
+            $(".ct1").wrap("<div />"); //ct1을 각각 하나씩 div로 묶음
+            $(".ct2").wrapAll("<div />"); //ct2의 내용들을 덩어리째로 div로 묶음
+            $("li").wrapInner("<h3 />"); //선택한 요소의 하위 요소를 뒤에 선택한 요소로 감싼다
+
+        });
+
+    </script>
+
+    <style>
+        div {
+            background: aqua;
+        }
+    </style>
+</head>
+<body>
+
+    <div id="wrap">
+        <p>text1 (index 0)</p>
+        <p>text2 (index 1)</p> 
+        <p>text3 (index 2)</p>
+    </div>
+
+
+
+    <div id="box1">
+        <p>text_1 : box1</p>
+        <p>text_1</p>
+        <p>text_1</p>
+        <p>text_1</p>
+    </div>
+    <div id="box2">
+        <p>text_2</p>
+        <p>text_2</p>
+        <p>text_2</p>
+    </div>
+    <div id="box3">
+        <p>text_3</p>
+        <p>text_3</p>
+        <p>text_3</p>
+
+    </div>
+
+    <hr />
+
+    <h1 id="tit_1">
+        <strong>객체조작 및 생성</strong>
+    </h1>
+    <p class="ct1">strong을 자식으로 가지고 있는 h1의 형제들1</p>
+    <p class="ct1">strong을 자식으로 가지고 있는 h1의 형제들2</p>
+    <p class="ct2">strong을 자식으로 가지고 있는 h1의 형제들3</p>
+    <p class="ct2">strong을 자식으로 가지고 있는 h1의 형제들4</p>
+    <p class="ct2">strong을 자식으로 가지고 있는 h1의 형제들4</p>
+    <ul>
+        <li>ul의 li 첫번째</li>
+        <li>ul의 li 두번째</li>
+    </ul>
+</body>
+</html>
