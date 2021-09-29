@@ -58,7 +58,7 @@
                 $("html, body").animate({
                     scrollTop: $(this.hash).offset().top
                     //500은 시간이라고 보면 됨(내려갈때 부드럽게 내려가라고~~~ 그 시간만큼 내려가라~~)
-                }, 500);
+                }, 500); 
             });
 
             //브라우저 크기 변화시 content 부분을 가운데 유지하기 위해
@@ -68,6 +68,7 @@
                 .height($(widow).height());
 
                 $(".container").each(function(){
+                    // 0qjsWo dlseprtmqnxj~~
                     $(this).css("margin-left", ($(this).width()/2 * -1) + "px")
                         .css("margin-top", ($(this).height()/2 * -1) + "px");
                 });
