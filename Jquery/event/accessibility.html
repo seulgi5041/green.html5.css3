@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="../jquery-3.6.0.min.js"></script>
+
+    <script>
+        $(function(){
+            $("#btn1")
+            .data({"text" : "javascript"}) //해당 요소에 데이터를 객체 형태로 저장
+            .on({
+                "mouseover" : overFnc,
+                "mouseout" : outFnc
+            });
+
+            $("#btn2")
+            .data({"text" : "wlecome!"})
+            .on({
+                "mouseover focus" : overFnc,
+                "mouseout blur" : outFnc
+            });
+
+            function overFnc() {
+                // data에 저장된 객체 데이터를 key값으로 불러온다.
+                $(".txt").text($(this).data("text"));
+            }
+            function outFnc() {
+                $(".txt").text("");
+            }
+        });
+    </script>
+</head>
+<body>
+    
+    <h1>키보드 접근성 이벤트</h1>
+    <p><button id="btn1">버튼1</button></p>
+    <p><button id="btn2">버튼2</button></p>
+    <p class="txt"></p>
+</body>
+</html>

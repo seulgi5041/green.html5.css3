@@ -19,9 +19,8 @@
             $("#user_id_1, #user_pw_1").on("blur",
             function(){
                 $(this).css({
-                    "backgrounk-color" : "white"
+                    "background-color" : "white"
                 });
-
             });
 
             $("#frm_2").on("focusin",
@@ -43,7 +42,7 @@
 </head>
 <body>
     
-    <h1>focus / blur </h1>
+    <h1>focus(이동하는 순간) / blur(요소를 떠나는 순간-다른 요소로 이동-) </h1>
     <form action="#">
 
         <p>
@@ -56,10 +55,15 @@
         </p>
     </form>
 
-    <h1>focusin / focusout </h1>
+    <h1>focusin(태그의 자식 태그 안으로 이동) / focusout(태그의 부모태그를 기준) </h1>
     <form action="#" id="frm_2">
         <p>
-            <label for=""></label>
+            <label for="user_id_2">ID2</label>
+            <input type="text" name="user_id_2" id="user_id_2">
+        </p>
+        <p>
+            <label for="user_pw_2">PW2</label>
+            <input type="password" name="user_pw_2" id="user_pw_2">
         </p>
 
     </form>
