@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="../jquery-3.6.0.min.js"></script>
+    <script>
+        $(function(){
+            $(".btn1").on({
+                "mouseover" : function() {
+                    $(".txt1").css({"background-color": "yellow"});
+                },
+                "mouseout" : function() {
+                    $(".txt1").css({"background" : "none"});
+                }
+            });
+
+            $(".btn2").hover(function() {
+                $(".txt2").css({"background-color" : "aqua"});
+            }, function(){
+                $(".txt2").css({"background" : "none"});
+            });
+        });
+
+    </script>
+</head>
+<body>
+    
+    <p>
+        <button class="btn1">mouse Over / Mouse Out</button>
+    </p>
+    <p class="txt1">txet1</p>
+    <p>mouseover / mouseout 은 마우스 올렸을때 내렸을때의 코드를 각각 작성</p>
+
+    <hr />
+    <p>
+        <button class="btn2">Hover</button>
+        <p class="txt2">text2</p>
+        <p>hover은 한꺼번에 코드 작성 가능</p>
+    </p>
+</body>
+</html>

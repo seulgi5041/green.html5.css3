@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="../jquery-3.6.0.min.js"></script>
+    <script>
+        $(function(){
+            $(".btn1").click(function() {
+                $(".btn1").parent().next()
+                .css({"color" : "blue"})
+            });
+            // 사용자가 버튼1을 누르면 글자를 파랑으로 변경
+
+
+            $(".btn2").on({
+            "mouseover focus" : function() {
+                $(".btn2").parent().next()
+                .css({"color" : "red"});
+            },
+            //사용자가 버튼2에 마우스포인터를 올리면 글자를 빨강으로 변경
+
+            "mouseout blur" : function() {
+                $(".btn2").parent().next()
+                .css({"color" : "black"});
+            },
+            //사용자가 버튼2에서 다른 요소로 마우스포인터를 옮기면 글자를 검정으로 변경
+        
+        });
+        });
+
+
+
+    </script>
+</head>
+<body>
+    
+    <p>
+        <button class="btn1">BUTTON1</button>
+    </p>
+    <p>text1</p>
+    <p>
+        <button class="btn2">BUTTON2</button>
+    </p>
+    <p>text2</p>
+</body>
+</html>

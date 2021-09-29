@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="../jquery-3.6.0.min.js"></script>
+    <script>
+        $(function(){
+            $(".btn1").click(function(){
+                $(".btn1").parent().next()
+                .css({"color" : "red"});
+            });
+
+            $(".btn2").on({
+                "mouseover focus" : function() {
+                    $(".btn2").parent().next()
+                    .css({"color" : "blue"});
+                }
+            });
+
+            $(".btn1").click(); //강제로 지정하는 첫번째 방법
+            $(".btn2").trigger("mouseover"); //trigger 메서드를 사용하여 강제 지정하는 방법
+
+        });
+
+    </script>
+</head>
+<body>
+    
+    <p>
+        <button class="btn1">BUTTON1</button>
+    </p>
+    <p>text1</p>
+    <p>
+        <button class="btn2">BUTTON2</button>
+    </p>
+    <p>text2</p>
+</body>
+</html>
