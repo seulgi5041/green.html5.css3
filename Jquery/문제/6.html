@@ -16,6 +16,18 @@
     <script src="jquery-3.6.0.min.js"></script>
     <script>
 
+        // $("li").each(function(index) {
+        //     console.log ( index + ": " + $( this ).text());
+        
+        // });
+        
+
+        $("li").each(function(index, elem) {
+            // 앞쪽에 삽입 (앞에 ''+ 까지는 없어도 무관~~)
+            $(elem).prepend( '' + index + ':' );
+        
+        });
+
     </script>
 </body>
 </html>

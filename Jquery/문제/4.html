@@ -15,6 +15,7 @@
     <script src="jquery-3.6.0.min.js"></script>
     <script>
         function new_div() {
+            // 태그의 속성, 속성 값 지정
             var test = {
                 id: "div",
                 class: "divclass",
@@ -22,8 +23,16 @@
                 "color": "Green"
                 }
             };
+
+            // 선언한 div 안에는 <div>와 test 속성이 들어감.
             var $div = $("<div>", test);
-                
+            //<div></div>만 생성
+
+
+            
+            $div.html("New Division");
+            //<div>New Division</div>가 생성됨
+            $("body").append($div);    
         }
     </script>
 </body>

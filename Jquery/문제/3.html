@@ -13,12 +13,28 @@
 
 
 
+    <!-- disabled 된 클릭창 해제하기 -->
+
+
+    
 <!-- 힌트 is(':disabled') -->
     <script src="jquery-3.6.0.min.js"></script>
     <script>
-        $('#accept').click(function() {
 
+        
+
+        $(function(){
+            $("#accept").on("click" , function (){
+                $("#submitbtn").attr("disabled", false);
+
+            });
         });
+
+
+
+    // $('#accept').click(function() {
+
+    //     });
     </script>
 </body>
 </html>
