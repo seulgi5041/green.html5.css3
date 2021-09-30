@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="../jquery-3.6.0.min.js"></script>
+
+    <script>
+        $(function(){
+            $(".btn_1.on").on("mouseover focus", function() {
+                alert("안녕");
+            });
+            $("btn_1").addClass("on");
+            //잘못된예
+            // 원래 태그에는 클래스가 안 붙어있음. 여기서 미리 class로 .on을 지정하고 후에 이벤트를 실행.
+            //이벤트를 실행하기도 전에 미리 class로 코드 정의해놓고, 이벤트를 실행하면 코드는 반응하지 않는다.
+
+
+            $(document).on("mouseover focus", ".btn_2.on", function() {
+                alert("반가워");
+            });
+            $(".btn_2").addClass("on");
+            // 라이브이벤트 등록방식의 옳바른 예
+            //라이브(동적)이벤트 방식의 기본형
+            //어떤 이벤트를 사용할 것인지 미리 지정 한 뒤에, 원래의 태그 뒤에 동적으로 생성하거나 복제한 요소, 이벤트 등을 쓴다.
+            //코드를 위의 방식대로 정의한 뒤(반드시 이벤트 지정 후 라이브이벤트)
+            //코드 실행하면 정상적으로 실행되는 것을 볼 수 있다.
+        });
+
+    </script>
+</head>
+<body>
+    <div id="wrap">
+        <p><button class="btn_1">버튼1</button></p>
+        <p><button class="btn_2">버튼2</button></p>
+    </div>
+</body>
+</html>

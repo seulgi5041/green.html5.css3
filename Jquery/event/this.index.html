@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="../jquery-3.6.0.min.js"></script>
+    <script>
+        $(function(){
+            $(".menuWrap_1 a").on("click", function(e){
+                e.preventDefault();
+
+                //먼저 preventDefault(); 로 이벤트를 막고 menuWrap_1 배경을 모두 흰색으로
+                $(".menuWrap_1 a").css({
+                    "background-color" : "white"
+                });
+
+                //선택한 태그 this(.menuWrap_1 a)를 노랑으로 바꿔준다.
+                $(this).css({
+                    "background-color" : "yellow"
+                });
+            });
+
+
+                //먼저 preventDefault(); 로 이벤트를 막고 menuWrap_2 배경을 모두 흰색으로
+            $(".menuWrap_2 a").on("click", function(e) {
+                e.preventDefault();
+
+                $(".menuWrap_2 a").css({
+                    "background-color" : "white"
+                });
+
+                //idx 변수 선언 후 idx안에 .menuWrap_2 a들의 인덱스 번호들을 각각 저장
+                var idx = $(".menuWrap_2 a").index(this);
+                
+                
+                 //eq를 이용하여 .menuWrap_2 a의 인덱스 번호와 idx의 인덱스 번호가 일치할때마다 빨강으로 바꿔준다.
+                $(".menuWrap_2 a").eq(idx).css({
+                    "background-color" : "red"
+                });
+
+                // 이후에 idxNum을 이용해서 인덱스 번호를 출력하라.
+                $(".idxNum").text(idx);
+            });
+        });
+
+    </script>
+</head>
+<body>
+    
+    <h2>$(this)</h2>
+    <ul class="menuWrap_1">
+        <li><a href="#">메뉴1</a></li>
+        <li><a href="#">메뉴2</a></li>
+        <li><a href="#">메뉴3</a></li>
+    </ul>
+
+    <h2>index()</h2>
+    <ul class="menuWrap_2">
+        <li><a href="#">메뉴4</a></li>
+        <li><a href="#">메뉴5</a></li>
+        <li><a href="#">메뉴6</a></li>
+    </ul>
+    <p class="idxNum"></p>
+</body>
+</html>
