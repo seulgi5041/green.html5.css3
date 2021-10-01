@@ -23,7 +23,7 @@ function getCurrentWeather(city) {
         async: false, //결과 데이터를 리턴시키기 위해 동기 방식으로 변경
         success: function(data) {
             // 정상 응답 시 처리 작업
-            dataObj(data);
+            dataObj = data;
         },
         error: function(request, status, error) {
             //응답 에러시 처리 작업
