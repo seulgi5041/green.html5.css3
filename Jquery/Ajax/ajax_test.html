@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <span>온도:</span>
+    <span id="temp"></span>
+    <br />
+    <span>체감온도:</span>
+    <span id="feeltemp"></span>
+    <br />
+    <span>바람:</span>
+    <span id="wind"></span>
+    <br />
+    <span>날씨(맑음/흐림):</span>
+    <span id="main"></span>
+    <br />
+
+    <span>위경도
+        <span>위도: </span><span id="coord_lat"></span>
+        <span>, 경도: </span><span id="coord"></span>
+    </span> 
+    <br />
+    <span>습도:</span>
+    <span id="humidity"></span>
+    <br />
+    <span>날씨 아이콘ID:</span>
+    <span id="wh_icon"></span>
+    <br />
+    <span>도시ID:</span>
+    <span id="city_id"></span>
+
+
+    <script src="../jquery-3.6.0.min.js"></script>
+    <script>        
+        // 아큐웨더의 API를 url에 넣어줬음
+        var url = "https://api.openweathermap.org/data/2.5/weather";
+            url  += "?q=incheon";
+            url  += "&appid=5b94187dfcff8cb319868abee2f627de";
+            url  += "&units=metric";
+            url  += "&lang=kr";
+
+        // ajax 형태 자체가 Json
+        $.ajax({
+            type: "GET",
+            url: url,
+            dataType: "json",
+            success: function(data) {
+                // 정상 응답 시 처리 작업
+                console.log(data);
+                console.log(data.main.temp);
+                console.log(data.wind.speed);
+                console.log(data.weather[0].description);
+
+                $("#temp").text(data.main.temp + "℃");
+                $("#feeltemp").text(data.main.feels_like + "℃")
+                $("#wind").text(data.wind.speed + "㎧");
+                $("#main").text(data.weather[0].description);
+                
+                
+                //위경도~~~
+                $("#coord_lat").text(data.coord.lat);
+                $("#coord").text(data.coord.lon);
+                $("#humidity").text(data.main.humidity + "%");
+                $("#wh_icon").text(data.weather[0].icon);
+                $("#city_id").text(data.id);
+
+            },
+            error: function(request, status, error) {
+                //응답 에러시 처리 작업
+                console.log("code:" + request.status);
+                console.log("message:" + request.responseText);
+                console.log("error:" + error);
+            },
+            complete: function(data, textStatus) {
+                //작업 완료 후 처리(생략하는 경우도 있음)
+            }
+        });
+    </script>
+</body>
+</html>
