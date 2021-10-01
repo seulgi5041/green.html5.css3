@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="../jquery-3.6.0.min.js"></script>
+    <script>
+
+        $(function() {
+            $("#btn").on("click", function(){
+                $("h1").fadeOut(1000, "linear")
+            })
+        });
+    </script>
+</head>
+<body>
+    <!-- 버튼을 눌렀을때 효과 메서드를 사용하여 h1이 점점 투명해지다가 사라지도록 하라 (사라지는 속도 1초) -->
+    <button id="btn">버튼</button>
+    <h1>내용</h1>
+</body>
+</html>

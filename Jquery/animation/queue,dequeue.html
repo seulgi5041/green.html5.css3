@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script src="../jquery-3.6.0.min.js"></script>
+    <script>
+
+        $(function(){
+            $(".txt1")
+            .animate({marginLeft: "200px"}, 1000)
+            .animate({marginTop: "200px"}, 1000)
+
+            .queue(function(){
+                // this= .txt1 이다.
+                $(this).css({background : "red"});
+                // queue메서드를 사용했다면 안에 반드시 dequeue를 사용해줘야 뒤에 올 애니메이션이 취소되지 않고 실행될 수 있다.
+                // dequeue를 안쓰면 뒤에 오는 애니메이션 두 개는 실행되지 않는다.
+                $(this).dequeue();
+            })
+            .animate({marginLeft: "0"}, 1000)
+            .animate({marginTop: "0"}, 1000)
+        });
+
+    </script>
+
+
+    <style>
+        * { margin: 0; }
+        .txt1 {
+            width: 50px;
+            text-align: center;
+            background-color: yellow;
+        }
+        
+
+    </style>
+</head>
+<body>
+    <p class="txt1">내용1</p>
+    
+</body>
+</html>

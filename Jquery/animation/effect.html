@@ -17,7 +17,7 @@
 
                 $(".box").slideUp(1000, "linear",
                 function(){
-                    $(".btn1").hide1();
+                    $(".btn1").hide();
                     $(".btn2").show();
                 });
             });
@@ -26,20 +26,20 @@
 
                 $(".box").padeIn(1000, "swing",
                 function(){
-                    $(".btn2").hide1();
+                    $(".btn2").hide();
                     $(".btn1").show();
                 });
             });
 
-            $(".btn3").on("clcik", function(){
+            $(".btn3").on("click", function(){
                 $(".box").slideToggle(1000, "linear");
             });
 
-            $(".btn4").on("clcik", function(){
+            $(".btn4").on("click", function(){
                 $(".box").fadeTo("fast", 0.3);
             });
             
-            $(".btn5").on("clcik", function(){
+            $(".btn5").on("click", function(){
                 $(".box").fadeTo("fast", 1);
             });
 
@@ -71,5 +71,10 @@
         <button class="btn4">FadeTo(0.3)</button>
         <button class="btn5">FadeTo(1)</button>
     </p>
+    <div class="box">
+        <div class="content">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum praesentium at consectetur non et numquam dignissimos, facilis culpa asperiores, excepturi, natus laborum doloribus similique molestias autem optio exercitationem accusantium aliquam?
+        </div>
+    </div>
 </body>
 </html>

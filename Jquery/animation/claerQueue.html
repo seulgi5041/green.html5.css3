@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script src="../jquery-3.6.0.min.js"></script>
+    <script>
+
+        $(function(){
+            $(".txt1")
+            .animate({marginLeft: "100px"}, 1000)
+            .animate({marginLeft: "300px"}, 1000)
+            .animate({marginLeft: "400px"}, 1000);
+
+            $(".txt2")
+            // clearQueue를 실행하면 첫번째 애니메이션만 실행하고 그 뒤의 애니메이션은 모두 취소시켜버린다.(제거됨)
+            .animate({marginLeft: "100px"}, 1000)
+            .animate({marginLeft: "300px"}, 1000)
+            .animate({marginLeft: "400px"}, 1000);
+            $(".txt2").clearQueue();
+        });
+
+    </script>
+
+
+    <style>
+        * { margin: 0; }
+        .txt1, .txt2 {
+            width: 50px;
+            text-align: center;
+            background-color: yellow;
+        }
+
+        .txt2 { background-color: blue; }
+        
+
+    </style>
+</head>
+<body>
+    <p class="txt1">내용1</p>
+    <p class="txt2">내용2</p>
+    
+</body>
+</html>

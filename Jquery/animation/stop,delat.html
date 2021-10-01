@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script src="../jquery-3.6.0.min.js"></script>
+    <script>
+
+        $(function(){
+            // 1초동안 300px 바로 움직임
+            $(".txt1")
+            .animate({marginLeft: "300px"}, 1000);
+
+            //3초 후에 300px 바로 움직임
+            $(".txt2").delay(3000)
+            .animate({marginLeft: "300px"}, 1000);
+
+
+            //버튼1을 눌렀을때 태그를 움직이라는 함수.
+            $(".btn1").on("click", moveElement);
+
+
+            function moveElement() {
+                // 버튼 1을 한번씩 누를 때마다 0.8초동안 50px씩 이동
+                $(".txt3")
+                .animate({marginLeft: "+=50px"}, 800);
+
+                // stop 했기 때문에 버튼을 눌러도 전혀 움직이지 않음.
+                $(".txt4")
+                .animate({marginLeft: "+=50px"}, 800);
+                $(".txt4").stop();
+
+                // 똑같은 stop이지만, 뒤에 (true,true)가 붙었음.
+                // 대기 중인 애니메이션이 제거 후 현재 진행 중인 애니메이션도 종료 시점으로 이동.
+                // 애니메이션이 아닌 CSS속성이 입혀진 것처럼 움직임(딱딱 끊어지며 이동)
+                $(".txt5")
+                .animate({marginLeft: "+=50px"}, 800);
+                $(".txt5").stop(true, true);
+
+            }
+
+        });
+
+    </script>
+
+
+    <style>
+        p {
+            width: 110px;
+            text-align: center;
+        }
+
+        .txt1 {background-color: aqua;}
+        .txt2 {background-color: pink;}
+        .txt3 {background-color: orange;}
+        .txt4 {background-color: green;}
+        .txt5 {background-color: yellow;}
+
+    </style>
+</head>
+<body>
+    <p class="txt1">효과1</p>
+    <p class="txt2">
+        효과2<br />
+        delay(3000)-즉 3초후
+    </p>
+    <p><button class="btn1">효과 3,4,5를 제어할 버튼 50px 전진</button></p>
+    <p class="txt3">효과3</p>
+    <p class="txt4">효과4 <br />stop속성</p>
+    <p class="txt5">효과5 <br />stop(true,true)</p>
+</body>
+</html>

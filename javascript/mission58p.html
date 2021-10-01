@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script>
+        // 하루 적정지출비용은 만원. 만원을 초과했을 경우 000원 초과, 아닐 경우는 good 출력
+
+        var price1 = 3000; //교통비
+        var price2 = 6000; //식비
+        var price3 = 3000; //음료비
+
+        var dayprice = price1 + price2 + price3;
+        
+        var result = dayprice < 10000 ? "good" : dayprice-10000 + "원 초과";
+        document.write(result);
+        
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

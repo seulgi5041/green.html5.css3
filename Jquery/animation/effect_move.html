@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="../jquery-3.6.0.min.js"></script>
+
+    <script>
+        $(function(){
+            var txt1 = $(".txt1");
+            var count = 1;
+            //함수를 먼저 선언
+
+            // class명이 btnWrap인 버튼을 클릭했을때
+            $(".btnWrap button").on("click", function(){
+
+                // 내용1이 애니메이션중이면 동작하지 않는다.
+                if(!txt1.is(":animated")) {
+
+                    // class값이 backBtn이면 동작 (뒤로 10%씩 들어간다.)
+                    if($(this).hasClass("backBtn")) {
+                        count--;
+                        if(count < 1 ) {
+                            count = 1;
+                            return false;
+                        }
+                        txt1.animate({marginLeft: "-=10%"}, 300);
+
+                        // class값이 backBtn이 아닌 경우에 동작 (앞으로 10%씩 나간다)
+                    } else {
+                        count++;
+                        if(count > 10) {
+                            count = 10;
+                            return false;
+                        }
+                        txt1.animate({marginLeft: "+=10%"}, 300);
+                    }
+                }
+            });
+        });
+
+    </script>
+
+
+</head>
+<body>
+    
+    <p class="btnWrap">
+        <button class="backBtn">Back</button>
+        <button class="goBtn">Go</button>
+    </p>
+    <div class="wrap">
+        <p class="txt1">내용1</p>
+    </div>
+
+
+</body>
+</html>
