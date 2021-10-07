@@ -6,10 +6,168 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="./swiper.css">
+
+    <style>
+    .swiper-container {
+        width: 100%;
+        height: 500px;
+    }
+    
+    .swiper-slide {
+        text-align: center;
+        font-size: 18px;
+        background: #fff;
+
+        /* Center slide text vertically */
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: -webkit-flex;
+        display: flex;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+
+        /* 가운데:센터정렬 */
+        -webkit-justify-content: center;
+        justify-content: center;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        -webkit-align-items: center;
+        align-items: center;
+    }
+
+    /* 슬라이드는 백그라운드로 하는게 컨트롤이 편함. */
+    .swiper-slide.slide1 {
+        background: url(images/img_visual14.jpg);
+        background-size: cover;
+        background-position: center;
+    }
+
+    .swiper-slide.slide2 {
+        background: url(images/img_visual15.jpg);
+        background-size: cover;
+        background-position: center;
+    }
+
+    .swiper-slide.slide3 {
+        background: url(images/img_visual22.jpg);
+        background-size: cover;
+        background-position: center;
+    }
+
+    .swiper-slide.slide4 {
+        background: url(images/img_visual25.jpg);
+        background-size: cover;
+        background-position: center;
+    }
+
+    .swiper-slide.slide5 {
+        background: url(images/img_visual27.jpg);
+        background-size: cover;
+        background-position: center;
+    }
+
+    .swiper-slide.slide6 {
+        background: url(images/img_visual30.jpg);
+        background-size: cover;
+        background-position: center;
+    }
+
+    @media screen and (max-width:767px) {
+        .swiper-slide.slide1 {
+            background: url(images/img_Mvisual14.jpg);
+            background-position: center;
+            background-size: cover;
+        }
+
+        .swiper-slide.slide2 {
+            background: url(images/img_Mvisual15.jpg);
+            background-position: center;
+            background-size: cover;
+        }
+
+        .swiper-slide.slide3 {
+            background: url(images/img_Mvisual22.jpg);
+            background-position: center;
+            background-size: cover;
+        }
+
+        .swiper-slide.slide4 {
+            background: url(images/img_Mvisual25.jpg);
+            background-position: center;
+            background-size: cover;
+        }
+
+        .swiper-slide.slide5 {
+            background: url(images/img_Mvisual27.jpg);
+            background-position: center;
+            background-size: cover;
+        }
+
+        .swiper-slide.slide6 {
+            background: url(images/img_Mvisual30.jpg);
+            background-position: center;
+            background-size: cover;
+        }
+        
+        
+    }
+
+    </style>
 </head>
 <body>
-    
+    <!-- Swiper -->
+    <div class="swiper-container swiper1">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide slide1"></div>
+            <div class="swiper-slide slide2"></div>
+            <div class="swiper-slide slide3"></div>
+            <div class="swiper-slide slide4"></div>
+            <div class="swiper-slide slide5"></div>
+            <div class="swiper-slide slide6"></div>
+        </div>
+        <!-- Add Arrows : 버튼 안 쓸거면 주석 처리하면 됨.-->
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+    </div>
+
+    <!-- Swiper -->
+    <div class="swiper-container swiper2">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide">Slide 1</div>
+            <div class="swiper-slide">Slide 2</div>
+            <div class="swiper-slide">Slide 3</div>
+            <div class="swiper-slide">Slide 4</div>
+            <div class="swiper-slide">Slide 5</div>
+        </div>
+        <!-- Add Pagination -->
+        <div class="swiper-pagination"></div>
+    </div>
+
 
     <script src="./swiper.min.js"></script>
+    <script>
+        // 첫번째 슬라이드 
+        // (기존 소스는 건들지 말고 내가 이름을 추가해서 각각의 이름을 써주어 추가하면 됨.)
+        var swiper = new Swiper('.swiper1', {
+            navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+        },
+            autoplay: {
+            delay: 3000,
+        },
+            speed: 900
+    });
+
+
+    // 두번째 슬라이드
+    var swiper = new Swiper('.swiper2', {
+
+        pagination: {
+        el: '.swiper-pagination',
+        },
+
+    });
+    </script>
 </body>
 </html>
