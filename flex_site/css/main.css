@@ -74,6 +74,7 @@ nav a#trigger {
     nav ul li {
         /* flex 요소들이 각 1대 1대 1로 알아서 그 크기 비율대로 잡힘(flex는 알아서 비율화가 됨) */
         flex: 1;
+        /* flex-basis: 비율 (근데 사실 위에처럼 1:1로 비율을 잡았다면 굳이 안 써도 알아서 잡히긴 함) */
         flex-basis: 22%;
         border-bottom: 0;
         border-right: 1px solid #576979;
@@ -121,4 +122,165 @@ section:nth-child(odd) {
     padding-top: 60px;
     padding-bottom: 40px;
     background: transparent;
+}
+
+/* 764px 이상일때 (넘어갈때~~~ PC버전 */
+@media screen and (min-width:764px) { 
+    .wrapper{
+        /* 최대 1300px를 넘어가지 않음 */
+        max-width: 1300px; 
+        /* 미디어쿼리부분에서 가운데정렬 시켜줬음 */
+        margin: 0 auto;
+    }
+    
+}
+
+
+/* 헤더 */
+.banner {
+    max-width: 1300px;
+    margin: 0 auto;
+}
+
+
+/* 코딩(빌게이츠 인용) 영역 */
+.about {
+    line-height: 1.8;
+    padding: 20px 50px;
+}
+
+.msg p {
+    color: #ff6600;
+    font-family: 'Nanum Myeongjo', serif;
+    font-size: 1.4em;
+    font-weight: 700;
+    font-style: italic;
+    text-align: center;
+    line-height: 1.8;
+    margin-bottom: 20px;
+}
+
+.msg span {
+    font-size:0.9em;
+    color: #aaa;
+}
+
+/* 왜 코딩 교육: 좌우 2개 항목 */
+.intro {
+    padding: 20px 50px;
+}
+
+.text {
+    padding-left:50px;
+    padding-right: 50px;
+}
+
+.text h3 {
+    font-size: 1.6em;
+    margin-bottom: 50px;
+}
+
+.text p {
+    font-size: 1.2em;
+    line-height: 1.8;
+}
+
+.img {
+    text-align: center;
+    display: none;
+}
+
+@media screen and (min-width:764px) { 
+    .intro {
+        padding: 20px 50px;
+        display: flex;
+        align-items: center;
+    }
+
+    .text {
+        flex:2;
+    }
+    /* 텍스트2 : 이미지1 로 각각 크기 차지하라고 정해줬음 */
+    .img{
+        display: block;
+        flex:1;
+    }
+
+    /* 이미지 크기는 250을 넘어갈 수 없다고 정해줬음 */
+    .img > img {
+        max-width: 250px;
+    }
+}
+
+/* 교육 프로그램 : 한 줄에 여러 항목 */
+.program-list {
+    padding:20px 50px;
+}
+
+.program-list h4 {
+    font-size:1.3em;
+    margin-bottom: 20px;
+}
+
+.program {
+    padding: 30px;
+    box-sizing: border-box;
+    margin-bottom: 20px;
+    background-color: #fff;
+    border: 1px solid #aaa;
+}
+
+@media screen and (min-width:764px) { 
+    .program-list {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .program {
+        flex-basis: 22%;
+    }
+}
+
+
+/* 푸터 */
+.footer {
+    padding-top: 30px;
+    padding-bottom: 50px;
+    background-color: #34495e;
+}
+
+.footer-info {
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.contact {
+    color: #fff;
+}
+
+.sns {
+    margin-top: 50px;
+}
+
+.sns a {
+    margin-right: 30px;
+}
+
+.sns a:last-child {
+    margin-right: 0;
+}
+
+@media screen and (min-width:764px) { 
+    .footer-info {
+        max-width: 1300px;
+        display: flex;
+    }
+
+    .contact {
+        flex:2;
+    }
+
+    .sns {
+        flex:1;
+    }
 }
