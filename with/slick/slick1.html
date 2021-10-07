@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./slick-theme.css">
+    <link rel="stylesheet" href="./slick.css">
+
+    <style>
+
+    html, body {
+        margin: 0;
+        padding: 0;
+    }
+
+    * {
+        box-sizing: border-box;
+    }
+    
+    .slider {
+        width: 50%;
+        margin: 100px auto;
+    }
+
+    .slick-slide {
+        margin: 0px 20px;
+    }
+
+    .slick-slide img {
+        width: 100%;
+    }
+
+    .slick-prev:before,
+    .slick-next:before {
+        color: black;
+    }
+
+
+    .slick-slide {
+        transition: all ease-in-out .3s;
+        opacity: .2;
+    }
+    
+    .slick-active {
+        opacity: .5;
+    }
+
+    .slick-current {
+        opacity: 1;
+    }
+
+    </style>
+</head>
+<body>
+    <section class="vertical-center-4 slider single-item">
+        <div>
+            <img src="http://placehold.it/350x100?text=1">
+        </div>
+        <div>
+            <img src="http://placehold.it/350x100?text=2">
+        </div>
+        <div>
+            <img src="http://placehold.it/350x100?text=3">
+        </div>
+        <div>
+            <img src="http://placehold.it/350x100?text=4">
+        </div>
+        <div>
+            <img src="http://placehold.it/350x100?text=5">
+        </div>
+        <div>
+            <img src="http://placehold.it/350x100?text=6">
+        </div>
+    
+
+<script src="./jquery-3.6.0.min.js"></script>
+<script src="./slick.min.js"></script>
+<script>
+//     $('.single-item').slick({
+//         infinite: true,
+//         slidesToShow: 2,
+//         slidesToScroll: 2,
+//         autoplay: true,
+//         speed: 300
+// });
+
+// $(".vertical-center-4").slick({
+//         dots: true,
+//         vertical: true,
+//         centerMode: true,
+//         slidesToShow: 4,
+//         slidesToScroll: 2
+// });
+
+$('.single-item').slick();
+
+</script>
+</body>
+</html>
