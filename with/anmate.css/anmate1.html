@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./animate.css">
+    <style>
+        img {
+            display: block;
+            margin: 400px auto;
+        }
+
+        .test {
+            animation-duration: 3s;
+        }
+    </style>
+</head>
+<body>
+    <!-- 첫번째는 접두사animate__animated, 띄어쓰기 후 두번째는 내가 적용하고싶은 애니메이션 이름 -->
+    <!-- <h1 class="animate__animated animate__fadeInUp">An animated element</h1> -->
+    <img src="./images/img_Mvisual14.jpg" class="animate__animated animate__fadeInDown">
+    <img src="./images/img_Mvisual15.jpg" class="wow animate__animated animate__flipInX animate__delay-2s">
+    <img src="./images/img_Mvisual22.jpg" class="wow test animate__animated animate__backInLeft">
+    <img src="./images/img_Mvisual14.jpg" class="wow animate__animated animate__zoomIn">
+    <img src="./images/img_Mvisual27.jpg" class="wow animate__animated animate__pulse animate__slower animate__infinite">
+
+
+
+
+<script src="./wow.min.js"></script>
+
+<script>
+    new WOW().init();
+
+</script>
+</body>
+</html>

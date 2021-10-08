@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /*  부모태그를 그리드로 먼저 그래야 자식태그들이 grid로 정렬  : felx랑 동일함 */
+        .wrapper {
+            display: grid;
+
+            /* 행과 열을 합쳐 내가 만든 아이템의 숫자가 되어야 함. */
+            /* 부모태그 안의 자식태그를 몇 컬럼(열)으로 만들건지 */
+            /* grid-template-columns: 200px 200px 200px; */
+            /* 부모태그 안의 자식태그를 몇 로우즈(행)으로 만들건지 */
+            /* grid-template-rows: minmax(100px auto); */
+            /*100px 200px 내용물이 흘러넘치게 됨. 그걸 막기 위해서*/
+
+
+            /* 비율 */
+            /* grid-template-columns: 1fr 1fr 1fr; */
+            grid-template-columns: repeat(3, 1fr); /* 위와 같은 결과 */
+
+
+        }
+
+        .item {
+            padding: 10px;
+            background-color: #eee;;
+        }
+
+        .item:nth-child(odd) {
+            background-color: #bbb;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+        <div class="item">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis repellat provident ratione exercitationem nisi earum, numquam maiores necessitatibus voluptate. Repellat hic ducimus voluptate itaque nisi quam blanditiis earum deserunt fuga.</div>
+        <div class="item">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis repellat provident ratione exercitationem nisi earum, numquam maiores necessitatibus voluptate. Repellat hic ducimus voluptate itaque nisi quam blanditiis earum deserunt fuga.</div>
+        <div class="item">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis repellat provident ratione exercitationem nisi earum, numquam maiores necessitatibus voluptate. Repellat hic ducimus voluptate itaque nisi quam blanditiis earum deserunt fuga.</div>
+        <div class="item">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis repellat provident ratione exercitationem nisi earum, numquam maiores necessitatibus voluptate. Repellat hic ducimus voluptate itaque nisi quam blanditiis earum deserunt fuga.</div>
+        <div class="item">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis repellat provident ratione exercitationem nisi earum, numquam maiores necessitatibus voluptate. Repellat hic ducimus voluptate itaque nisi quam blanditiis earum deserunt fuga.</div>
+    </div>
+</body>
+</html>
