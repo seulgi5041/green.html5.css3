@@ -39,7 +39,7 @@ ul { list-style: none; }
 
 #main_header .logo {
     float: left;
-    width: 190px;
+    /* width: 190px; */
 }
 
 #main_header ul {
