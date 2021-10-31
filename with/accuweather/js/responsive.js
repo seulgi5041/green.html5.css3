@@ -25,7 +25,7 @@ $(function(){
             $(".lnb_container").show();
 
             // eq: gnbIndex = $(this).index();태그를 통해서 gnb-li 각각 인덱스와 동일한 lnb div그룹의 배열 번호를 가져와라.
-            $(".lnb").eq(gnbIndex).css("display","block"); //인라인 태그의 우선순위를 이용 
+            $(".lnb li").eq(gnbIndex).css("display","block"); //인라인 태그의 우선순위를 이용 
             
             // .css는 css의 속성을 바꿔줄 수 있는 태그. display에서 block으로 바꿔라.
 
