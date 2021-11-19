@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        // fetch(ES6부터 지원 : API통신) 함수는 Promise 자체를 반환.
+        // API통신을 쓰는 방법 : aJax , fetch(IE에서 지원 안 함) , axios(링크 자체를 받아와서 쓰기 때문에 느릴 수 있음.)
+
+        let url = "https://api.openweathermap.org/data/2.5/weather";
+            url  += "?appid=f98e648c60dee9415bd3b65e176b86ca";
+            url  += "&units=metric";
+            url  += "&lang=kr";
+            url  += "&q=incheon";
+
+        const getData = (url) => {
+            return fetch(url);
+        }
+
+        // promise 사용
+        //then 문법 자체가 promise 
+        getData(url).then(
+            data => data.json()
+        ).then(
+            result => console.log(result)
+        );
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

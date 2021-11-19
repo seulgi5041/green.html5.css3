@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+
+        //클래스를 사용해 객체지향화 할수있다(이전의 prototype과 같다.)
+        class myClass {
+            constructor(name, age) { // 생성자:constructor 를 사용
+                this.name = name;
+                this.age = age;
+            }
+
+            sayHello() { // 함수
+                console.log(`안녕 ${this.name} 너의 나이는 ${this.age}살이다`);
+            }
+        }
+
+        // myClass 메서드 및 속성 상속(myClass에 들어있는 내용들을 상속 받아 사용하겠다.)
+        class UserProfile extends myClass {
+            userName() {
+                // this.name은 myClass에 있는 내용(UserProfile은 부모(myClass)의 내용을 상속했음)
+                console.log(this.name);
+            }
+        }
+
+        const profile = new UserProfile('영희', 22);
+
+        profile.sayHello(); // 안녕 영희 너의 나이는 22살이다.
+        profile.userName(); // 영희
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

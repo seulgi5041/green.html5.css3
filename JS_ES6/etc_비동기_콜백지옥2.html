@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+
+        /* 콜백함수1- 제이쿼리 이벤트 */
+        // $( "#target" ).click(function() {
+        // alert( "Handler for .click() called." );
+        // });
+
+
+        /* 콜백함수2 */
+        //콜백함수 선언
+        function add(x, callback) {
+            let sum = x + x;
+            console.log(sum); //첫번째로 실행한뒤에 add(2, )
+            callback(sum); //두번째로 실행 ( , res)
+        }
+
+        add(2, res=>{
+            console.log('finish: ' + res);
+        });
+
+
+        /* 콜백 지옥 */
+
+        // 콜백함수가 여러개가 될 경우에는 코드가 아주 지저분해 질 수 있음 : 해결하기 위해 ES6에서 promise와 async,await가 등장 
+        // function add(x, callback) {
+        //     let sum = x + x;
+        //     console.log(sum);
+        //     callback(sum);
+        // }
+
+        // add(2, res=>{
+        //     add(res, res=>{
+        //         add(res, res=>{
+        //             console.log('finish: ' + res);
+        //         });
+        //     });
+        // });
+    </script>
+</head>
+<body>
+    
+    
+</body>
+</html>

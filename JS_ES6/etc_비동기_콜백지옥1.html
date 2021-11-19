@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="./jquery-3.6.0.min.js"></script>
+    <script>
+        //비동기 첫번재 사례(제이쿼리 ajax통신)
+        let url = "https://api.openweathermap.org/data/2.5/weather";
+            url  += "?appid=f98e648c60dee9415bd3b65e176b86ca";
+            url  += "&units=metric";
+            url  += "&lang=kr";
+            url  += "&q=incheon";
+        
+        let dataObj;
+
+        // ajax는 동기 방식으로 변경하지 않으면 동기방식으로 작동하지 않음(순서대로 실행하지 않음)
+        // 이 코드를 실행중에 console을 먼저 실행해 버리기 때문에 값이 undefinde로 나옴
+        $.ajax({
+            type: "GET",
+            url: url,
+            dataType: "json",
+            success: function(data) {
+                //정상 응답시 처리 작업 
+                dataObj = data;
+            },
+            error: function(request, status, error) {
+                //응답 에러시 처리 작업    
+                console.log("code:" + request.status);
+                console.log("message:" + request.responseText);
+                console.log("error:" + error);
+            }
+        });
+
+        console.log("결과 값:" + dataObj);
+
+
+
+        //비동기 두번째 사례
+        // console.log('Hello');
+
+        // setTimeout(function() {
+        //     console.log('Bye');
+        // }, 3000);
+
+        
+        // console.log('Hello Agn'); // 3초가 될 때까지 기다리지 않음. 이거를 먼저 찍어서 두번째로 나올 것
+    </script>
+</head>
+<body>
+    
+    
+</body>
+</html>
